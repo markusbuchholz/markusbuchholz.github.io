@@ -61,9 +61,10 @@
             text-align: center;
         }
         .image-container img {
-            max-width: 80%;
-            border-radius: 50%;
+            max-width: 100%;
+            height: auto;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 0; /* Makes the image square or rectangular */
         }
         @media (max-width: 768px) {
             .container {
@@ -87,7 +88,7 @@
     </header>
     <div class="container">
         <div class="content">
-            <h1>Hi, I’m Markus! 👋</h1>
+            <h1>Hi, I’m Markus!</h1>
             <p>
                 I am a robotics researcher with many years of R&D experience in robotics motion control, 
                 software development for manipulators, and industrial applications (both onshore and offshore).
@@ -105,7 +106,7 @@
             </p>
         </div>
         <div class="image-container">
-            <img src="markus.png" alt="Markus' Photo">
+            <img src="markus.jpg" alt="Markus' Photo">
         </div>
     </div>
 </body>
