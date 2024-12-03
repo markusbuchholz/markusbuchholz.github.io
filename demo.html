@@ -61,10 +61,10 @@
             text-align: center;
         }
         .image-container img {
-            max-width: 100%;
-            height: auto;
+            max-width: 50%; /* Scale image to 50% of original size */
+            height: auto;   /* Maintain aspect ratio */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 0; /* Makes the image square or rectangular */
+            border-radius: 0; /* Keep the image square or rectangular */
         }
         @media (max-width: 768px) {
             .container {
@@ -72,7 +72,7 @@
                 align-items: center;
             }
             .image-container img {
-                max-width: 60%;
+                max-width: 60%; /* Adjust scaling for smaller screens */
             }
         }
     </style>
