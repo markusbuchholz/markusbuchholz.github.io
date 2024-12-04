@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+        .project {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .project-text {
+            flex: 1 1 60%;
+        }
+        .project-text h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        .project-text p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .project-text a {
+            text-decoration: none;
+            color: #0073e6;
+            font-size: 1rem;
+        }
+        .project-image {
+            flex: 1 1 35%;
+            text-align: center;
+        }
+        .project-image img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projects</h1>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="title">My Projects</div>
+
+        <!-- Project 1 -->
+        <div class="project">
+            <div class="project-text">
+                <h2>Project 1</h2>
+                <p>A short description of Project 1 explaining what it’s about.</p>
+                <a href="https://example.com/video1" target="_blank">Watch the Video</a>
+            </div>
+            <div class="project-image">
+                <img src="project1.jpg" alt="Project 1 Image">
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+            <div class="project-text">
+                <h2>Project 2</h2>
+                <p>A short description of Project 2 explaining its main features or purpose.</p>
+                <a href="https://example.com/video2" target="_blank">Watch the Video</a>
+            </div>
+            <div class="project-image">
+                <img src="project2.jpg" alt="Project 2 Image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
