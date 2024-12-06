@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .description {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        .course {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .course-text {
+            flex: 1 1 60%;
+        }
+        .course-text h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        .course-text p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .course-text a {
+            text-decoration: none;
+            color: #0073e6;
+            font-size: 1rem;
+            margin-right: 15px;
+        }
+        .course-image {
+            flex: 1 1 35%;
+            text-align: center;
+        }
+        .course-image img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teaching</h1>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="teach.html">Teaching</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="title">Teaching and Courses</div>
+        <div class="description">
+            I am a Teaching Assistant for the <strong>Robotic System Science</strong> course at Heriot-Watt University.  
+            I also create online robotics courses using <strong>ROS</strong>, hosted on  
+            <a href="https://www.theconstructsim.com/" target="_blank">The Construct</a>.  
+            Additionally, I provide technical support to university students in their research projects, including MSc and BSc theses, 
+            helping them tackle robotics-related challenges.
+        </div>
+
+        <div class="course">
+            <div class="course-text">
+                <h2>BSc Project (Chen XIANGRU): LLM-Driven Behavior Trees for Autonomous Underwater Robotics Missions</h2>
+                <p>
+                    This project aimed to generate behavior trees for autonomous underwater robotics missions. A Large Language Model (LLM) 
+                    was used to verify the feasibility of the mission based on human input and the robot's abilities. 
+                    The behavior trees were first executed in the simulator (<a href="https://stonefish.readthedocs.io/en/latest/" target="_blank" style="text-decoration: none; color: #0073e6;">StoneFish</a>) 
+                    and, if feasible, in real-world environments.
+                </p>
+                <!-- Uncomment the following line if a project repository link becomes available -->
+                <!-- <a href="https://github.com/BaudouinBelpaire/MSc_Project" target="_blank">Project Repository</a> -->
+            </div>
+            <div class="course-image">
+                <img src="media/mission.png" alt="LLM-Driven Behavior Trees Project">
+            </div>
+        </div>
+        
+
+        <div class="course">
+            <div class="course-text">
+                <h2>MSc Project (Baudouin BELPAIRE): Waste Collection Pipeline on BlueBoat</h2>
+                <p>
+                    This project focused on solving the problem of waste collection in a maritime setting. The collection was 
+                    performed by a robotic arm mounted on an Autonomous Surface Vehicle (ASV), also known as BlueBoat. 
+                    The waste was localized using a vision system, which also supported navigation and precise task execution.
+                </p>
+                <a href="https://github.com/BaudouinBelpaire/MSc_Project" target="_blank">Project Repository</a>
+            </div>
+            <div class="course-image">
+                <img src="media/waste.png" alt="Waste Collection Pipeline Project">
+            </div>
+        </div>
+        
+
+        <!-- Course 1 -->
+        <div class="course">
+            <div class="course-text">
+                <h2>Behavior Trees for ROS2</h2>
+                <p>
+                    Understand the concept of the Behavior Trees framework. Learn how to use the Behavior Trees framework in practice and how to apply them with ROS2.
+                </p>
+                <a href="https://app.theconstruct.ai/courses/131" target="_blank">Course Link</a>
+            </div>
+            <div class="course-image">
+                <img src="media/bt_course.png" alt="BT">
+            </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course">
+            <div class="course-text">
+                <h2>Reinforcement Learning for Robotics (ROS)</h2>
+                <p>
+                    The course will give you the state-of-the-art opportunity to be familiar with the general concept of reinforcement learning and
+                    to deploy theory into practice by running coding exercises and simulations in ROS.
+                </p>
+                <a href="https://app.theconstruct.ai/courses/68" target="_blank">Course Link</a>
+            </div>
+            <div class="course-image">
+                <img src="media/rl_course.png" alt="RL">
+            </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course">
+            <div class="course-text">
+                <h2>Machine Learning for Robotics (ROS)</h2>
+                <p>
+                    In this course, you are going to learn about machine learning concepts applicable to robotics; understand the fundamental principles of
+                    artificial intelligence and how the robots think and make independent decisions; make robots smarter and more collaborative; and advance your skills in Python programming.
+                </p>
+                <a href="https://app.theconstruct.ai/courses/47" target="_blank">Course Link</a>
+            </div>
+            <div class="course-image">
+                <img src="media/ml_course.png" alt="ML">
+            </div>
+        </div>
+    </div>
+
+    <div class="course">
+        <div class="course-text">
+            <h2>Machine Learning for Robotics (ROS)</h2>
+            <p>
+                In this course, you are going to learn about machine learning concepts applicable to robotics; understand the fundamental principles of
+                artificial intelligence and how the robots think and make independent decisions; make robots smarter and more collaborative; and advance your skills in Python programming.
+            </p>
+            <a href="https://app.theconstruct.ai/courses/47" target="_blank">Course Link</a>
+        </div>
+        <div class="course-image">
+            <img src="media/ml_course.png" alt="ML">
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
+
