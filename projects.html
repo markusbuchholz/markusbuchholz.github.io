@@ -80,14 +80,35 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .social-icons img {
+            width: 45px; /* Enlarged the icons */
+            height: 40px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Projects</h1>
+        <div class="social-icons">
+            <a href="https://github.com/markusbuchholz" target="_blank"><img src="media/github_logo.png" alt="GitHub"></a>
+            <a href="https://medium.com/@markus-x-buchholz" target="_blank"><img src="media/medium_logo.png" alt="Medium"></a>
+            <a href="https://www.linkedin.com/in/markusbuchholz" target="_blank"><img src="media/linkedin_logo.png" alt="LinkedIn"></a>
+            <a href="mailto:markus.x.buchholz@gmail.com" target="_blank"><img src="media/gmail_logo.png" alt="Gmail"></a>
+        </div>
         <nav>
             <a href="index.html">About</a>
+            <a href="research.html">Research</a>
             <a href="projects.html">Projects</a>
+            <a href="teach.html">Teaching</a>
         </nav>
     </header>
     <div class="container">
@@ -125,7 +146,9 @@
         <div class="project">
             <div class="project-text">
                 <h2>MotoROS2 (at Yaskawa Robotics)</h2>
-                <p>Development and testing of the ROS 2 interface for Yaskawa manipulators, including the creation of example applications.</p>
+                <p>
+                    Testing and contributing to development of the ROS 2 interface for Yaskawa manipulators, enabling seamless integration and creating example applications to showcase its capabilities. This project leveraged advanced motion planning techniques and real-time robotics frameworks.
+                </p>
                 <p>
                     <a href="https://github.com/YaskawaEurope/ros2-starter-for-yaskawa-robots" target="_blank" style="margin-right: 25px;">GitHub</a>
                     <a href="https://www.youtube.com/watch?v=-TZbwtD8xG0" target="_blank" style="margin-right: 25px;">My presentation at the ROS-I Consortium 2023</a>
@@ -140,8 +163,26 @@
         <!-- Project 4 -->
         <div class="project">
             <div class="project-text">
+                <h2>MOTOMAN NEXT (at Yaskawa Robotics)</h2>
+                <p>
+                    Development and testing of the next generation robot controller, powered by the Nvidia Jetson platform. The project enhanced introduced AI-driven optimizations to improve robotic performance.
+                </p>
+                <p>
+                    <a href="https://www.yaskawa-global.com/newsrelease/product/170859" target="_blank" style="margin-right: 25px;">Product</a>
+                </p>
+            </div>
+            <div class="project-image">
+                <img src="media/yaskawa.jpg" alt="Motoman Project Image">
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project">
+            <div class="project-text">
                 <h2>IRB5500 Paint Robot on Elevated Rail (at ABB Robotics)</h2>
-                <p>Research and development of motion control software, integration with ABB RobotWare and RobotStudio, motion trimming and testing.</p>
+                <p>
+                    Research and development of motion control software for the IRB5500 Paint Robot. This included integration with ABB RobotWare and RobotStudio, precise motion trimming, and stress testing to meet high-performance industrial standards.
+                </p>
                 <p>
                     <a href="https://new.abb.com/products/robotics/robots/paint-robots/irb-5500-25" target="_blank" style="margin-right: 25px;">Product</a>
                     <a href="https://www.youtube.com/watch?v=ahxGFTHwg5s" target="_blank" style="margin-right: 25px;">ABB Paint Robots</a>
@@ -152,7 +193,25 @@
             </div>
         </div>
 
-        <!-- Project 5 -->
+        <!-- Project 6 -->
+        <div class="project">
+            <div class="project-text">
+                <h2>IRB5500 SafeMove (at ABB Robotics)</h2>
+                <p>
+                    Researched and developed the SafeMove2 functionality for ABB robots, optimizing motion control to ensure robots could stop precisely on a planned trajectory within stringent time constraints. This project prioritized safety and performance in dynamic environments.
+                </p>
+                <p>
+                    <a href="https://www.youtube.com/watch?v=HPuLsNWlz34" target="_blank" style="margin-right: 25px;">Video 1</a>
+                    <a href="https://www.youtube.com/watch?v=FFqiSyGoSMU" target="_blank" style="margin-right: 25px;">Video 2</a>
+                </p>
+            </div>
+            <div class="project-image">
+                <img src="media/safe.png" alt="ABB Project Image">
+            </div>
+        </div>
+
+
+        <!-- Project 7 -->
         <div class="project">
             <div class="project-text">
                 <h2>Real-Time Path Planner for Industrial Robots (at Zivid)</h2>
@@ -170,8 +229,9 @@
                 <img src="media/zivid.png" alt="Zivid Project Image">
             </div>
         </div>
-
-        <!-- Project 5 -->
+        
+        https://www.youtube.com/watch?v=XI93jyp5URM
+        <!-- Project 8 -->
         <div class="project">
             <div class="project-text">
                 <h2>Hybrid Propulsion System (at Rolls Royce Marine)</h2>
@@ -179,16 +239,21 @@
                     Research and development of a hybrid electrical power system for marine vessels. 
                     This project focused on integrating traditional propulsion systems with modern electric drives to enhance efficiency and reduce emissions.
                 </p>
+                <p>
+                    <p>
+                        <a href="https://www.kongsberg.com/maritime/products/electrical-power-system/energy-products/electric-hybrid-propulsion/" target="_blank" style="margin-right: 25px;">Product</a>
+                        <a href="https://www.youtube.com/watch?v=HUro1j5qct0" target="_blank" style="margin-right: 25px;">Video 1</a>
+                        <a href="https://www.youtube.com/watch?v=XI93jyp5URM" target="_blank" style="margin-right: 25px;">Video 2</a>
+                    </p>
+                </p>
             </div>
             <div class="project-image">
                 <img src="media/propulsion.png" alt="Hybrid Propulsion System Project Image">
             </div>
         </div>
 
-        ABB Robot Control System 
-
-
-        <!-- Project 6 -->
+    
+        <!-- Project 9 -->
         <div class="project">
             <div class="project-text">
                 <h2>Tidal Water Generation (at Rolls Royce Marine)</h2>
@@ -202,7 +267,7 @@
             </div>
         </div>
 
-        <!-- Project 7 -->
+        <!-- Project 10 -->
         <div class="project">
             <div class="project-text">
                 <h2>PhD Thesis: Mechatronic Design Techniques for Motion Control Systems of a Three-Wheeled Mobile Platform Using an Energy Performance Index</h2>

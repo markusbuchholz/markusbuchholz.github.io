@@ -81,15 +81,37 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .social-icons img {
+            width: 45px; /* Enlarged the icons */
+            height: 40px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
     </style>
 </head>
 <body>
     <header>
         <h1>Teaching</h1>
+        <div class="social-icons">
+            <a href="https://github.com/markusbuchholz" target="_blank"><img src="media/github_logo.png" alt="GitHub"></a>
+            <a href="https://medium.com/@markus-x-buchholz" target="_blank"><img src="media/medium_logo.png" alt="Medium"></a>
+            <a href="https://www.linkedin.com/in/markusbuchholz" target="_blank"><img src="media/linkedin_logo.png" alt="LinkedIn"></a>
+            <a href="mailto:markus.x.buchholz@gmail.com" target="_blank"><img src="media/gmail_logo.png" alt="Gmail"></a>
+        </div>
         <nav>
             <a href="index.html">About</a>
+            <a href="research.html">Research</a>
             <a href="projects.html">Projects</a>
             <a href="teach.html">Teaching</a>
+            <!-- <a href="#">Contact</a> -->
         </nav>
     </header>
     <div class="container">
