@@ -134,7 +134,7 @@
                     The repository provides all necessary commands and references that can boost your software's research and development process, which utilizes the ROS 2 stack.
                 </p>
                 <p>
-                    <a href="https://github.com/markusbuchholz/stonefish_ros2_marine_robotics" target="_blank" style="margin-right: 25px;">Repository</a>
+                    <a href="https://github.com/markusbuchholz/stonefish_ros2_marine_robotics" target="_blank" style="margin-right: 25px;">GitHub</a>
         
                 </p>
             </div>
@@ -152,7 +152,7 @@
                     Users can plan complex missions using ROS 2, ArduPilot or QGroundControl by defining waypoints and survey grids.
                 </p>
                 <p>
-                    <a href="https://github.com/markusbuchholz/gazebosim_bluerov2_ardupilot_sitl?tab=readme-ov-file" target="_blank" style="margin-right: 25px;">Repository</a>
+                    <a href="https://github.com/markusbuchholz/gazebosim_bluerov2_ardupilot_sitl?tab=readme-ov-file" target="_blank" style="margin-right: 25px;">GitHub</a>
         
                 </p>
             </div>
@@ -164,18 +164,102 @@
         <!-- Software 3 -->
         <div class="software">
             <div class="software-text">
+                <h2>BlueBoat Dynamic Model with Disturbances (MPC, PID)</h2>
+                <p>
+                    This repository provides a comprehensive dynamic model of BlueBoat implemented in C++.
+                    The model with environmental disturbances (waves, wind, and ocean currents) uses the Runge-Kutta method to solve the differential equations governing the ASV's motion.
+                    Additionally, the repository includes a Simulink model equipped with PID controllers, which allows for parameter autotuning to optimize the ASV's performance.
+                    The C++ program also includes MPC and PID controller, allowing for consistent control strategies across different platforms.
+                </p>
+                <p>
+                    <a href="https://github.com/markusbuchholz/blueboat_dynamics" target="_blank" style="margin-right: 25px;">GitHub</a>
+        
+                </p>
+            </div>
+            <div class="software-image">
+                <img src="media/blueboat.png" alt="Marine Robotics Simulation Framework">
+            </div>
+        </div>
+
+        <!-- Software 4 -->
+        <div class="software">
+            <div class="software-text">
                 <h2>BlueBoat simulation SITL with GazeboSim</h2>
                 <p>
                     The following simulation environment offers the BlueBoat simulation SITL with GazeboSim. 
                     Users can plan complex missions using ROS 2, ArduPilot or QGroundControl by defining waypoints and survey grids.
                 </p>
                 <p>
-                    <a href="https://github.com/markusbuchholz/gazebosim_blueboat_ardupilot_sitl" target="_blank" style="margin-right: 25px;">Repository</a>
+                    <a href="https://github.com/markusbuchholz/gazebosim_blueboat_ardupilot_sitl" target="_blank" style="margin-right: 25px;">GitHub</a>
         
                 </p>
             </div>
             <div class="software-image">
-                <img src="media/blueboat.png" alt="Marine Robotics Simulation Framework">
+                <img src="media/real_blueboat.png" alt="Marine Robotics Simulation Framework">
+            </div>
+        </div>
+
+        <!-- Software 5 -->
+        <div class="software">
+            <div class="software-text">
+                <h2>ROS2 and Moveit for manipulators</h2>
+                <p>
+                    This repository provides the Docker container to run ROS 2 with Moveit.
+                    You can find simple programs to move the robot in joint space and working space.
+                </p>
+                <p>
+                    <a href="https://github.com/markusbuchholz/ros2_moveit_manipulators" target="_blank" style="margin-right: 25px;">GitHub</a>
+        
+                </p>
+            </div>
+            <div class="software-image">
+                <img src="media/moveit.png" alt="Simulation Framework">
+            </div>
+        </div>
+
+
+        <!-- Software 6 -->
+        <div class="software">
+            <div class="software-text">
+                <h2>Reinforcement Learning Path Planner for 6DOF Robot</h2>
+                <p>
+                    This framework demonstrates how to simulate a Doosan collaborative robot in ROS 2 for motion planning using reinforcement learning. 
+                    A reinforcement learning agent calculates an optimal path in Cartesian space, avoiding obstacles. The solution integrates numerical 
+                    Inverse Kinematics to compute the robot's joint positions, which are sent to the robot controller to execute the motion.
+                </p>
+                <p>
+                    The planner identifies optimal paths between two points (A and B) while avoiding obstacles, leveraging the Bellman equation for path computation. 
+                    This approach contrasts with traditional algorithms like A*, which operates in joint space. For further insights, refer to my article 
+                    and implementation examples.
+                </p>
+                <p>
+                    <a href="https://medium.com/geekculture/reinforcement-learning-path-planner-for-6dof-robot-in-ros2-518581dc72c7" target="_blank" style="margin-right: 25px;">Article</a>
+                    <a href="https://github.com/markusbuchholz/6DOF_Robot_in_ROS2_Doosan" target="_blank" style="margin-right: 25px;">GitHub</a>
+                </p>
+            </div>
+            <div class="software-image">
+                <img src="media/doosan.gif" alt="Simulation Framework">
+            </div>
+        </div>
+
+
+
+                        <!-- Software 5 -->
+        <div class="software">
+            <div class="software-text">
+                <h2>Build Linux Kernel</h2>
+                <p>
+                    This repository provides information about building a custom Linux distribution and covers both the technical understanding and practical implementation.
+                    The steps include compiling the Linux kernel in a Docker container and integrating a minimalist environment using BusyBox. The system can be booted using QEMU.
+                    The diagram below summarizes the methodology of creating a custom Linux distribution by leveraging the modularity of BusyBox and the Linux Kernel.
+                </p>
+                <p>
+                    <a href="https://github.com/markusbuchholz/build_linux_kernel_os" target="_blank" style="margin-right: 25px;">GitHub</a>
+        
+                </p>
+            </div>
+            <div class="software-image">
+                <img src="media/linux.png" alt="Linux">
             </div>
         </div>
 
