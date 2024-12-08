@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Frameworks</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .intro {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .software {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .software-text {
+            flex: 1 1 60%;
+        }
+        .software-text h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        .software-text p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .software-text a {
+            text-decoration: none;
+            color: #0073e6;
+            font-size: 1rem;
+        }
+        .software-image {
+            flex: 1 1 35%;
+            text-align: center;
+        }
+        .software-image img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .social-icons img {
+            width: 45px; /* Enlarged the icons */
+            height: 40px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Software</h1>
+        <div class="social-icons">
+            <a href="https://github.com/markusbuchholz" target="_blank"><img src="media/github_logo.png" alt="GitHub"></a>
+            <a href="https://medium.com/@markus-x-buchholz" target="_blank"><img src="media/medium_logo.png" alt="Medium"></a>
+            <a href="https://www.linkedin.com/in/markusbuchholz" target="_blank"><img src="media/linkedin_logo.png" alt="LinkedIn"></a>
+            <a href="mailto:markus.x.buchholz@gmail.com" target="_blank"><img src="media/gmail_logo.png" alt="Gmail"></a>
+        </div>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="projects.html">Projects</a>
+            <a href="software.html">Software</a>
+            <a href="teach.html">Teaching</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="title">Main Software Frameworks</div>
+        <div class="intro">
+            I frequently use the following tools and platforms: <strong>ROS 2, C++, Python, Linux, Docker</strong>, and simulation frameworks such as 
+            <strong>StoneFish, GazeboSim, MoveIt2, Matlab, Pinocchio, Crocoddyl, and ArduPilot</strong>. Here, I share the primary software frameworks 
+            I’ve developed that may assist in algorithm prototyping, system debugging, and various research or engineering efforts. 
+            I encourage you to explore my <a href="https://github.com/markusbuchholz" target="_blank" style="color: #0073e6; text-decoration: none;">GitHub</a> 
+            for additional repositories and resources. 
+            While similar tools exist, I hope my frameworks provide a unique and valuable approach.
+        </div>
+
+        <!-- Software 1 -->
+        <div class="software">
+            <div class="software-text">
+                <h2>StoneFish ROS 2 Marine Robotics Simulator</h2>
+                <p>
+                    The repository provides a Docker container with a bash scripts that can seamlessly build and run the container.
+                    Docker container offers ROS 2 environment whare you can launch vehicles in <a href="https://stonefish.readthedocs.io/en/latest/" target="_blank" style="color: #0073e6; text-decoration: none;">StoneFish</a>.
+                    The repository provides all necessary commands and references that can boost your software's research and development process, which utilizes the ROS 2 stack.
+                </p>
+                <p>
+                    <a href="https://github.com/markusbuchholz/stonefish_ros2_marine_robotics" target="_blank" style="margin-right: 25px;">Repository</a>
+        
+                </p>
+            </div>
+            <div class="software-image">
+                <img src="media/stonefish.png" alt="Marine Robotics Simulation Framework">
+            </div>
+        </div>
+        
+        <!-- Software 2 -->
+        <div class="software">
+            <div class="software-text">
+                <h2>BlueROV2 simulation SITL in Gazebo</h2>
+                <p>
+                    The following simulation environment offers the BlueROV2 simulation SITL with GazeboSim. 
+                    Users can plan complex missions using ROS 2, ArduPilot or QGroundControl by defining waypoints and survey grids.
+                </p>
+                <p>
+                    <a href="https://github.com/markusbuchholz/gazebosim_bluerov2_ardupilot_sitl?tab=readme-ov-file" target="_blank" style="margin-right: 25px;">Repository</a>
+        
+                </p>
+            </div>
+            <div class="software-image">
+                <img src="media/bluerov2.png" alt="Marine Robotics Simulation Framework">
+            </div>
+        </div>
+
+        <!-- Software 3 -->
+        <div class="software">
+            <div class="software-text">
+                <h2>BlueBoat simulation SITL with GazeboSim</h2>
+                <p>
+                    The following simulation environment offers the BlueBoat simulation SITL with GazeboSim. 
+                    Users can plan complex missions using ROS 2, ArduPilot or QGroundControl by defining waypoints and survey grids.
+                </p>
+                <p>
+                    <a href="https://github.com/markusbuchholz/gazebosim_blueboat_ardupilot_sitl" target="_blank" style="margin-right: 25px;">Repository</a>
+        
+                </p>
+            </div>
+            <div class="software-image">
+                <img src="media/blueboat.png" alt="Marine Robotics Simulation Framework">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
