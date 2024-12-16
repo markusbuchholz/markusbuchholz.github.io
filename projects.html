@@ -93,6 +93,43 @@
         .social-icons img:hover {
             transform: scale(1.2);
         }
+        .btn-rounded {
+            display: inline-block;
+            background-color: #1f5c6e; /* Button color (teal) */
+            color: #ffffff !important; /* Ensure text is always white */
+            font-size: 0.7rem; /* Reduced font size */
+            line-height: 1; /* Adjusted line height for smaller text */
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 6px 14px; /* Reduced padding for smaller button */
+            border: none;
+            border-radius: 20px; /* Slightly smaller border radius */
+            text-decoration: none;
+            margin-right: 10px; /* Adjusted margin */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-rounded:visited, 
+        .btn-rounded:active, 
+        .btn-rounded:focus {
+            color: #ffffff !important; /* Always white text on all states */
+        }
+
+        .btn-rounded:hover {
+            background-color: #174652; /* Darker shade on hover */
+            color: #ffffff !important; /* Ensure text stays white on hover */
+            transform: scale(1.05); /* Slight scale on hover */
+            cursor: pointer;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px; /* Reduced space between buttons */
+            flex-wrap: wrap; /* Wrap buttons if screen is narrow */
+        }
+
     </style>
 </head>
 <body>
@@ -126,8 +163,10 @@
                 <h2>Robot Pipe Handler. Fully Automated Drilling Rig (at Canrig Robotics)</h2>
             
                 <p>Research and Development (R&D) in software development, robot motion control, safe movement, vision systems, simulation, and commissioning in Houston, TX, USA.</p>
-                <a href="https://www.youtube.com/watch?v=j8DYa42X-qk" target="_blank" style="margin-right: 25px;">Video 1</a>
-                <a href="https://www.youtube.com/watch?v=6V5GXk4zrXY" target="_blank" style="margin-right: 25px;">Video 2</a>
+                <p><div class="btn-group">
+                <a href="https://www.youtube.com/watch?v=j8DYa42X-qk" target="_blank" style="margin-right: 25px;"class="btn-rounded">Video 1</a>
+                <a href="https://www.youtube.com/watch?v=6V5GXk4zrXY" target="_blank" style="margin-right: 25px;"class="btn-rounded">Video 2</a>
+            </div>
             </div>
             <div class="project-image">
                 <img src="media/rig_nabors.jpeg" alt="Project 1 Image" style="width: 100%; height: auto; max-height: 590px; object-fit: cover; border-radius: 8px;">
@@ -139,7 +178,10 @@
             <div class="project-text">
                 <h2>Robot 7DOF (at Canrig Robotics)</h2>
                 <p>Research and Development (R&D) in software development, robotic motion control, vision systems, simulation, and commissioning on an offshore drilling rig in Norway.</p>
-                <a href="https://www.youtube.com/watch?v=FeYC0oIn3Pg2" target="_blank">Video</a>
+                <p>
+                    <div class="btn-group">
+                <a href="https://www.youtube.com/watch?v=FeYC0oIn3Pg2" target="_blank"class="btn-rounded">Video</a>
+                </div>
             </div>
             <div class="project-image">
                 <img src="media/robot_nabors.jpg" alt="Project 2 Image">
@@ -157,10 +199,12 @@
                     This project combined innovative robotics and computer vision technologies, culminating in a patented solution in the United States. 
                 </p>
                 <p>
-                    <a href="https://drive.google.com/file/d/17eWVx1d-HUaL3f-hHabSq-MZypRZ08db/view?usp=sharing" target="_blank" style="margin-right: 25px;">Video 1</a>
-                    <a href="https://drive.google.com/file/d/1jGcf98IQOy112k_Vzo9H6CdCmPW4lnht/view?usp=sharing" target="_blank" style="margin-right: 25px;">Video 2</a>
-                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=no&user=YnoZFxwAAAAJ&citation_for_view=YnoZFxwAAAAJ:u-x6o8ySG0sC" target="_blank" style="margin-right: 25px;">Patent 1</a>
-                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=no&user=YnoZFxwAAAAJ&citation_for_view=YnoZFxwAAAAJ:u5HHmVD_uO8C" target="_blank" style="margin-right: 25px;">Patent 2</a>
+                    <p><div class="btn-group">
+                    <a href="https://drive.google.com/file/d/17eWVx1d-HUaL3f-hHabSq-MZypRZ08db/view?usp=sharing" target="_blank" style="margin-right: 25px;"class="btn-rounded">Video 1</a>
+                    <a href="https://drive.google.com/file/d/1jGcf98IQOy112k_Vzo9H6CdCmPW4lnht/view?usp=sharing" target="_blank" style="margin-right: 25px;"class="btn-rounded">Video 2</a>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=no&user=YnoZFxwAAAAJ&citation_for_view=YnoZFxwAAAAJ:u-x6o8ySG0sC" target="_blank" style="margin-right: 25px;"class="btn-rounded">Patent 1</a>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=no&user=YnoZFxwAAAAJ&citation_for_view=YnoZFxwAAAAJ:u5HHmVD_uO8C" target="_blank" style="margin-right: 25px;"class="btn-rounded">Patent 2</a>
+                    </div>
                 </p>
             </div>
             <div class="project-image">
@@ -176,11 +220,12 @@
                 <p>
                     Testing and contributing to development of the ROS 2 interface for Yaskawa manipulators, enabling seamless integration and creating example applications to showcase its capabilities. This project leveraged advanced motion planning techniques and real-time robotics frameworks.
                 </p>
-                <p>
-                    <a href="https://github.com/YaskawaEurope/ros2-starter-for-yaskawa-robots" target="_blank" style="margin-right: 20px;">GitHub</a>
-                    <a href="https://www.youtube.com/watch?v=-TZbwtD8xG0" target="_blank" style="margin-right: 20px;">My presentation at the ROS-I 2023</a>
-                    <a href="https://docs.google.com/presentation/d/1NTnXeTuY0O6x6CcPK_pgQjYoWUl2WPrkECzEqIzzIWs/edit?usp=sharing" target="_blank" style="margin-right: 20px;">Presentation</a>
-                    <a href="https://drive.google.com/file/d/15qfLgNjMq1mTpHb6u_a-f0vgvGUHA7_C/view?usp=sharing" target="_blank">MoveIt ROS 2 Application</a>
+                <p><div class="btn-group">
+                    <a href="https://github.com/YaskawaEurope/ros2-starter-for-yaskawa-robots" target="_blank" style="margin-right: 20px;"class="btn-rounded">GitHub</a>
+                    <a href="https://www.youtube.com/watch?v=-TZbwtD8xG0" target="_blank" style="margin-right: 20px;"class="btn-rounded">My presentation at the ROS-I 2023</a>
+                    <a href="https://docs.google.com/presentation/d/1NTnXeTuY0O6x6CcPK_pgQjYoWUl2WPrkECzEqIzzIWs/edit?usp=sharing" target="_blank" style="margin-right: 20px;"class="btn-rounded">Presentation</a>
+                    <a href="https://drive.google.com/file/d/15qfLgNjMq1mTpHb6u_a-f0vgvGUHA7_C/view?usp=sharing" target="_blank"class="btn-rounded">MoveIt ROS 2 Application</a>
+                    </div>
                 </p>
             </div>
             <div class="project-image">
@@ -196,7 +241,9 @@
                     Development and testing of the next generation robot controller, powered by the Nvidia Jetson platform. The project enhanced introduced AI-driven optimizations to improve robotic performance.
                 </p>
                 <p>
-                    <a href="https://www.yaskawa-global.com/newsrelease/product/170859" target="_blank" style="margin-right: 25px;">Product</a>
+                    <p><div class="btn-group">
+                    <a href="https://www.yaskawa-global.com/newsrelease/product/170859" target="_blank" style="margin-right: 25px;"class="btn-rounded">Product</a>
+                    </div>
                 </p>
             </div>
             <div class="project-image">
@@ -211,9 +258,10 @@
                 <p>
                     Research and development of motion control software for the IRB5500 Paint Robot. This included integration with ABB RobotWare and RobotStudio, precise motion trimming, and stress testing to meet high-performance industrial standards.
                 </p>
-                <p>
-                    <a href="https://new.abb.com/products/robotics/robots/paint-robots/irb-5500-25" target="_blank" style="margin-right: 25px;">Product</a>
-                    <a href="https://www.youtube.com/watch?v=ahxGFTHwg5s" target="_blank" style="margin-right: 25px;">ABB Paint Robots</a>
+                <p><div class="btn-group">
+                    <a href="https://new.abb.com/products/robotics/robots/paint-robots/irb-5500-25" target="_blank" style="margin-right: 25px;"class="btn-rounded">Product</a>
+                    <a href="https://www.youtube.com/watch?v=ahxGFTHwg5s" target="_blank" style="margin-right: 25px;"class="btn-rounded">ABB Paint Robots</a>
+                    </div>
                 </p>
             </div>
             <div class="project-image">
@@ -228,9 +276,10 @@
                 <p>
                     Researched and developed the SafeMove2 functionality for ABB robots, optimizing motion control to ensure robots could stop precisely on a planned trajectory within stringent time constraints. This project prioritized safety and performance in dynamic environments.
                 </p>
-                <p>
-                    <a href="https://www.youtube.com/watch?v=HPuLsNWlz34" target="_blank" style="margin-right: 25px;">Video 1</a>
-                    <a href="https://www.youtube.com/watch?v=FFqiSyGoSMU" target="_blank" style="margin-right: 25px;">Video 2</a>
+                <p><div class="btn-group">
+                    <a href="https://www.youtube.com/watch?v=HPuLsNWlz34" target="_blank" style="margin-right: 25px;"class="btn-rounded">Video 1</a>
+                    <a href="https://www.youtube.com/watch?v=FFqiSyGoSMU" target="_blank" style="margin-right: 25px;"class="btn-rounded">Video 2</a>
+                    </div>
                 </p>
             </div>
             <div class="project-image">
@@ -251,8 +300,10 @@
                     Responsibilities included software development, integration with ABB RobotStudio, and rigorous testing and commissioning of the system. The project emphasized achieving optimal synchronization and coordination of robotic movements, enhancing both efficiency and reliability in industrial workflows.
                 </p>
                 <p>
-                    <a href="https://www.youtube.com/watch?v=b8kRE4lFdOM" target="_blank" style="margin-right: 25px;">Video</a>
-                    <a href="https://www.yumpu.com/en/document/view/16480033/continuous-motion-rig-cmr-technology" target="_blank" style="margin-right: 25px;">Presentation</a>
+                    <div class="btn-group">
+                    <a href="https://www.youtube.com/watch?v=b8kRE4lFdOM" target="_blank" style="margin-right: 25px;"class="btn-rounded">Video</a>
+                    <a href="https://www.yumpu.com/en/document/view/16480033/continuous-motion-rig-cmr-technology" target="_blank" style="margin-right: 25px;"class="btn-rounded">Presentation</a>
+                    </div>
                 </p>
             </div>
             <div class="project-image">
@@ -271,9 +322,11 @@
                     The project involved interfacing with robot controllers to enable seamless integration and efficient trajectory execution.
                 </p>
                 <p>
-                    <a href="https://drive.google.com/file/d/1hG94PyM-6fTa6580BEC4bx-uoZ3N1Yx0/view?usp=sharing" target="_blank" style="margin-right: 25px;">Video 1</a>
-                    <a href="https://drive.google.com/file/d/1hFVVU6jP8jhJxEEUKuZr1jg_3dWSPVFa/view?usp=sharing" target="_blank" style="margin-right: 25px;">Video 2</a>
-                    <a href="https://drive.google.com/file/d/1hfQXJbUcdjt6sfZc4sqd_VATyr2_qMPS/view?usp=sharing" target="_blank" style="margin-right: 25px;">Video 3</a>
+                    <div class="btn-group">
+                    <a href="https://drive.google.com/file/d/1hG94PyM-6fTa6580BEC4bx-uoZ3N1Yx0/view?usp=sharing" target="_blank" style="margin-right: 25px;"class="btn-rounded">Video 1</a>
+                    <a href="https://drive.google.com/file/d/1hFVVU6jP8jhJxEEUKuZr1jg_3dWSPVFa/view?usp=sharing" target="_blank" style="margin-right: 25px;"class="btn-rounded">Video 2</a>
+                    <a href="https://drive.google.com/file/d/1hfQXJbUcdjt6sfZc4sqd_VATyr2_qMPS/view?usp=sharing" target="_blank" style="margin-right: 25px;"class="btn-rounded">Video 3</a>
+                    </div>
                 </p>
             </div>
             <div class="project-image">
@@ -292,9 +345,11 @@
                 </p>
                 <p>
                     <p>
-                        <a href="https://www.kongsberg.com/maritime/products/electrical-power-system/energy-products/electric-hybrid-propulsion/" target="_blank" style="margin-right: 25px;">Product</a>
-                        <a href="https://www.youtube.com/watch?v=HUro1j5qct0" target="_blank" style="margin-right: 25px;">Video 1</a>
-                        <a href="https://www.youtube.com/watch?v=XI93jyp5URM" target="_blank" style="margin-right: 25px;">Video 2</a>
+                        <div class="btn-group">
+                        <a href="https://www.kongsberg.com/maritime/products/electrical-power-system/energy-products/electric-hybrid-propulsion/" target="_blank" style="margin-right: 25px;"class="btn-rounded">Product</a>
+                        <a href="https://www.youtube.com/watch?v=HUro1j5qct0" target="_blank" style="margin-right: 25px;"class="btn-rounded">Video 1</a>
+                        <a href="https://www.youtube.com/watch?v=XI93jyp5URM" target="_blank" style="margin-right: 25px;"class="btn-rounded">Video 2</a>
+                        </div>
                     </p>
                 </p>
             </div>

@@ -94,6 +94,43 @@
         .social-icons img:hover {
             transform: scale(1.2);
         }
+        .btn-rounded {
+            display: inline-block;
+            background-color: #1f5c6e; /* Button color (teal) */
+            color: #ffffff !important; /* Ensure text is always white */
+            font-size: 0.7rem; /* Reduced font size */
+            line-height: 1; /* Adjusted line height for smaller text */
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 6px 14px; /* Reduced padding for smaller button */
+            border: none;
+            border-radius: 20px; /* Slightly smaller border radius */
+            text-decoration: none;
+            margin-right: 10px; /* Adjusted margin */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-rounded:visited, 
+        .btn-rounded:active, 
+        .btn-rounded:focus {
+            color: #ffffff !important; /* Always white text on all states */
+        }
+
+        .btn-rounded:hover {
+            background-color: #174652; /* Darker shade on hover */
+            color: #ffffff !important; /* Ensure text stays white on hover */
+            transform: scale(1.05); /* Slight scale on hover */
+            cursor: pointer;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px; /* Reduced space between buttons */
+            flex-wrap: wrap; /* Wrap buttons if screen is narrow */
+        }
+
     </style>
     </style>
 </head>
@@ -154,7 +191,9 @@
                     performed by a robotic arm mounted on an Autonomous Surface Vehicle (ASV), also known as BlueBoat. 
                     The waste was localized using a vision system, which also supported navigation and precise task execution.
                 </p>
-                <a href="https://github.com/BaudouinBelpaire/MSc_Project" target="_blank">Project Repository</a>
+                <div class="btn-group">
+                <a href="https://github.com/BaudouinBelpaire/MSc_Project" target="_blank"class="btn-rounded">Project Repository</a>
+                </div>
             </div>
             <div class="course-image">
                 <img src="media/waste.png" alt="Waste Collection Pipeline Project">
@@ -169,7 +208,9 @@
                 <p>
                     Understand the concept of the Behavior Trees framework. Learn how to use the Behavior Trees framework in practice and how to apply them with ROS2.
                 </p>
-                <a href="https://app.theconstruct.ai/courses/131" target="_blank">Course Link</a>
+                <div class="btn-group">
+                <a href="https://app.theconstruct.ai/courses/131" target="_blank"class="btn-rounded">Course Link</a>
+                </div>
             </div>
             <div class="course-image">
                 <img src="media/bt_course.png" alt="BT">
@@ -184,7 +225,9 @@
                     The course will give you the state-of-the-art opportunity to be familiar with the general concept of reinforcement learning and
                     to deploy theory into practice by running coding exercises and simulations in ROS.
                 </p>
-                <a href="https://app.theconstruct.ai/courses/68" target="_blank">Course Link</a>
+                <div class="btn-group">
+                <a href="https://app.theconstruct.ai/courses/68" target="_blank"class="btn-rounded">Course Link</a>
+                </div>
             </div>
             <div class="course-image">
                 <img src="media/rl_course.png" alt="RL">
@@ -199,7 +242,9 @@
                     In this course, you are going to learn about machine learning concepts applicable to robotics; understand the fundamental principles of
                     artificial intelligence and how the robots think and make independent decisions; make robots smarter and more collaborative; and advance your skills in Python programming.
                 </p>
-                <a href="https://app.theconstruct.ai/courses/47" target="_blank">Course Link</a>
+                <div class="btn-group">
+                <a href="https://app.theconstruct.ai/courses/47" target="_blank"class="btn-rounded">Course Link</a>
+                </div>
             </div>
             <div class="course-image">
                 <img src="media/ml_course.png" alt="ML">
@@ -213,7 +258,9 @@
                 <p>
                     My prestentaion of ROS 2 to Yaskawa software and application engineers. 
                 </p>
-                <a href="https://docs.google.com/presentation/d/1ad0-JqwCS78xy8y5F3t-ltsyJqfr6CLu7coeafWb2EM/edit?usp=sharing" target="_blank">Presentation</a>
+                <div class="btn-group">
+                <a href="https://docs.google.com/presentation/d/1ad0-JqwCS78xy8y5F3t-ltsyJqfr6CLu7coeafWb2EM/edit?usp=sharing" target="_blank"class="btn-rounded">Presentation</a>
+                </div>
             </div>
             <div class="course-image">
                 <img src="media/ros2.png" alt="ros2">
@@ -227,7 +274,9 @@
                 <p>
                     My lecture for Robotics Systems Science course. 
                 </p>
-                <a href="https://docs.google.com/presentation/d/1-35cebRuFf6nEzDT3PqDQkWRCxUB6Wil/edit?usp=sharing&ouid=116822742311365163276&rtpof=true&sd=true" target="_blank">Lecture</a>
+                <div class="btn-group">
+                <a href="https://docs.google.com/presentation/d/1-35cebRuFf6nEzDT3PqDQkWRCxUB6Wil/edit?usp=sharing&ouid=116822742311365163276&rtpof=true&sd=true" target="_blank"class="btn-rounded">Lecture</a>
+                </div>
             </div>
             <div class="course-image">
                 <img src="media/ros2_hwu.png" alt="ros2">
@@ -241,7 +290,9 @@
                 <p>
                     My presentation providing genrral overwie about the concept and software stackup used in most common open-source projects. 
                 </p>
-                <a href="https://docs.google.com/presentation/d/1L9FzHzYUFvdV-qV7_xJEBZ75VjJyGAZlXEuWe-whuMk/edit?usp=sharing" target="_blank">Presentation</a>
+                <div class="btn-group">
+                <a href="https://docs.google.com/presentation/d/1L9FzHzYUFvdV-qV7_xJEBZ75VjJyGAZlXEuWe-whuMk/edit?usp=sharing" target="_blank"class="btn-rounded">Presentation</a>
+                </div>
             </div>
             <div class="course-image">
                 <img src="media/marine_robotics.png" alt="marine_robotics">

@@ -93,6 +93,43 @@
         .social-icons img:hover {
             transform: scale(1.2);
         }
+        .btn-rounded {
+            display: inline-block;
+            background-color: #1f5c6e; /* Button color (teal) */
+            color: #ffffff !important; /* Ensure text is always white */
+            font-size: 0.7rem; /* Reduced font size */
+            line-height: 1; /* Adjusted line height for smaller text */
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 6px 14px; /* Reduced padding for smaller button */
+            border: none;
+            border-radius: 20px; /* Slightly smaller border radius */
+            text-decoration: none;
+            margin-right: 10px; /* Adjusted margin */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-rounded:visited, 
+        .btn-rounded:active, 
+        .btn-rounded:focus {
+            color: #ffffff !important; /* Always white text on all states */
+        }
+
+        .btn-rounded:hover {
+            background-color: #174652; /* Darker shade on hover */
+            color: #ffffff !important; /* Ensure text stays white on hover */
+            transform: scale(1.05); /* Slight scale on hover */
+            cursor: pointer;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px; /* Reduced space between buttons */
+            flex-wrap: wrap; /* Wrap buttons if screen is narrow */
+        }
+
     </style>
     </style>
 </head>
@@ -135,7 +172,9 @@
                     The repository provides all necessary commands and references that can boost your software's research and development process, which utilizes the ROS 2 stack.
                 </p>
                 <p>
-                    <a href="https://github.com/markusbuchholz/stonefish_ros2_marine_robotics" target="_blank" style="margin-right: 25px;">GitHub</a>
+                    <div class="btn-group">
+                    <a href="https://github.com/markusbuchholz/stonefish_ros2_marine_robotics" target="_blank" style="margin-right: 25px;"class="btn-rounded">GitHub</a>
+                    </div>
         
                 </p>
             </div>
@@ -152,8 +191,9 @@
                     The following simulation environment offers the BlueROV2 simulation SITL with GazeboSim. 
                     Users can plan complex missions using ROS 2, ArduPilot or QGroundControl by defining waypoints and survey grids.
                 </p>
-                <p>
-                    <a href="https://github.com/markusbuchholz/gazebosim_bluerov2_ardupilot_sitl?tab=readme-ov-file" target="_blank" style="margin-right: 25px;">GitHub</a>
+                <p><div class="btn-group">
+                    <a href="https://github.com/markusbuchholz/gazebosim_bluerov2_ardupilot_sitl?tab=readme-ov-file" target="_blank" style="margin-right: 25px;"class="btn-rounded">GitHub</a>
+                    </div>
         
                 </p>
             </div>
@@ -172,8 +212,9 @@
                     Additionally, the repository includes a Simulink model equipped with PID controllers, which allows for parameter autotuning to optimize the ASV's performance.
                     The C++ program also includes MPC and PID controller, allowing for consistent control strategies across different platforms.
                 </p>
-                <p>
-                    <a href="https://github.com/markusbuchholz/blueboat_dynamics" target="_blank" style="margin-right: 25px;">GitHub</a>
+                <p><div class="btn-group">
+                    <a href="https://github.com/markusbuchholz/blueboat_dynamics" target="_blank" style="margin-right: 25px;"class="btn-rounded">GitHub</a>
+                    </div>
         
                 </p>
             </div>
@@ -191,7 +232,9 @@
                     Users can plan complex missions using ROS 2, ArduPilot or QGroundControl by defining waypoints and survey grids.
                 </p>
                 <p>
-                    <a href="https://github.com/markusbuchholz/gazebosim_blueboat_ardupilot_sitl" target="_blank" style="margin-right: 25px;">GitHub</a>
+                    <div class="btn-group">
+                    <a href="https://github.com/markusbuchholz/gazebosim_blueboat_ardupilot_sitl" target="_blank" style="margin-right: 25px;"class="btn-rounded">GitHub</a>
+                    </div>
         
                 </p>
             </div>
@@ -209,8 +252,9 @@
                     You can find simple programs to move the robot in joint space and working space.
                 </p>
                 <p>
-                    <a href="https://github.com/markusbuchholz/ros2_moveit_manipulators" target="_blank" style="margin-right: 25px;">GitHub</a>
-        
+                    <div class="btn-group">
+                    <a href="https://github.com/markusbuchholz/ros2_moveit_manipulators" target="_blank" style="margin-right: 25px;"class="btn-rounded">GitHub</a>
+                    </div>
                 </p>
             </div>
             <div class="software-image">
@@ -234,8 +278,10 @@
                     and implementation examples.
                 </p>
                 <p>
-                    <a href="https://medium.com/geekculture/reinforcement-learning-path-planner-for-6dof-robot-in-ros2-518581dc72c7" target="_blank" style="margin-right: 25px;">Article</a>
-                    <a href="https://github.com/markusbuchholz/6DOF_Robot_in_ROS2_Doosan" target="_blank" style="margin-right: 25px;">GitHub</a>
+                    <div class="btn-group">
+                    <a href="https://medium.com/geekculture/reinforcement-learning-path-planner-for-6dof-robot-in-ros2-518581dc72c7" target="_blank" style="margin-right: 25px;"class="btn-rounded">Article</a>
+                    <a href="https://github.com/markusbuchholz/6DOF_Robot_in_ROS2_Doosan" target="_blank" style="margin-right: 25px;"class="btn-rounded">GitHub</a>
+                    </div>
                 </p>
             </div>
             <div class="software-image">
@@ -254,9 +300,10 @@
                     The steps include compiling the Linux kernel in a Docker container and integrating a minimalist environment using BusyBox. The system can be booted using QEMU.
                     The diagram below summarizes the methodology of creating a custom Linux distribution by leveraging the modularity of BusyBox and the Linux Kernel.
                 </p>
-                <p>
-                    <a href="https://medium.com/@markus-x-buchholz/build-your-own-linux-distribution-a-kernel-compilation-and-virtualization-c8ce0f9808f6" target="_blank" style="margin-right: 25px;">Article</a>
-                    <a href="https://github.com/markusbuchholz/build_linux_kernel_os" target="_blank" style="margin-right: 25px;">GitHub</a>
+                <p><div class="btn-group">
+                    <a href="https://medium.com/@markus-x-buchholz/build-your-own-linux-distribution-a-kernel-compilation-and-virtualization-c8ce0f9808f6" target="_blank" style="margin-right: 25px;"class="btn-rounded">Article</a>
+                    <a href="https://github.com/markusbuchholz/build_linux_kernel_os" target="_blank" style="margin-right: 25px;"class="btn-rounded">GitHub</a>
+                    </div>
         
                 </p>
             </div>

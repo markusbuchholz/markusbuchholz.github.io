@@ -93,6 +93,44 @@
         .social-icons img:hover {
             transform: scale(1.2);
         }
+        .btn-rounded {
+            display: inline-block;
+            background-color: #1f5c6e; /* Button color (teal) */
+            color: #ffffff !important; /* Ensure text is always white */
+            font-size: 0.7rem; /* Reduced font size */
+            line-height: 1; /* Adjusted line height for smaller text */
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 6px 14px; /* Reduced padding for smaller button */
+            border: none;
+            border-radius: 20px; /* Slightly smaller border radius */
+            text-decoration: none;
+            margin-right: 10px; /* Adjusted margin */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-rounded:visited, 
+        .btn-rounded:active, 
+        .btn-rounded:focus {
+            color: #ffffff !important; /* Always white text on all states */
+        }
+
+        .btn-rounded:hover {
+            background-color: #174652; /* Darker shade on hover */
+            color: #ffffff !important; /* Ensure text stays white on hover */
+            transform: scale(1.05); /* Slight scale on hover */
+            cursor: pointer;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px; /* Reduced space between buttons */
+            flex-wrap: wrap; /* Wrap buttons if screen is narrow */
+        }
+
+
     </style>
 </head>
 <body>
@@ -135,12 +173,13 @@
                     and real-time decision-making under uncertainty. This research also investigates the feasibility of deploying such systems for sustainable offshore wind farm maintenance,
                     aiming to reduce human intervention and operational costs.
                 </p>
-                <p>
-                    <a href="https://rina.org.uk/publications/ship-and-boat-international/robots-unite-for-offshore-wind-farm-maintenance/" target="_blank" style="margin-right: 25px;">Link 1</a>
-                    <a href="https://thenationalrobotarium.com/crewless-maintenance-vessels-to-support-offshore-wind-farm-repairs/" target="_blank" style="margin-right: 25px;">Link 2</a>
-                    <a href="https://www.hw.ac.uk/news-archive/2023/crewless-maintenance-vessels-to-support.htm" target="_blank" style="margin-right: 25px;" >Link 3</a>
-                    <a href="https://drive.google.com/file/d/1_bGTR88DknjDiREBTO-WTQ0bnUHr3bP-/view?usp=sharing" target="_blank" style="margin-right: 25px;">My Simulation 1</a>
-                    <a href="https://drive.google.com/file/d/1Q0iwVdlFjSDMapYmbNfmgVQ0vYhXliD6/view?usp=sharing" target="_blank" style="margin-right: 25px;" >My Simulation 2</a>
+                <p><div class="btn-group">
+                    <a href="https://rina.org.uk/publications/ship-and-boat-international/robots-unite-for-offshore-wind-farm-maintenance/" target="_blank" style="margin-right: 25px;"class="btn-rounded">Link 1</a>
+                    <a href="https://thenationalrobotarium.com/crewless-maintenance-vessels-to-support-offshore-wind-farm-repairs/" target="_blank" style="margin-right: 25px;"class="btn-rounded">Link 2</a>
+                    <a href="https://www.hw.ac.uk/news-archive/2023/crewless-maintenance-vessels-to-support.htm" target="_blank" style="margin-right: 25px;"class="btn-rounded" >Link 3</a>
+                    <a href="https://drive.google.com/file/d/1_bGTR88DknjDiREBTO-WTQ0bnUHr3bP-/view?usp=sharing" target="_blank" style="margin-right: 25px;"class="btn-rounded">My Simulation 1</a>
+                    <a href="https://drive.google.com/file/d/1Q0iwVdlFjSDMapYmbNfmgVQ0vYhXliD6/view?usp=sharing" target="_blank" style="margin-right: 25px;"class="btn-rounded" >My Simulation 2</a>
+                </div>
                 </p>
             </div>
             <div class="research-image">
@@ -157,7 +196,9 @@
                     to be invaluable for system design, risk assessment, and performance optimization
                 </p>
                 <p>
-                    <a href="https://sites.google.com/view/aq2uasim/home?authuser=0" target="_blank" style="font-weight: normal; text-decoration: none; color: #0073e6;">Workshop</a>
+                    <div class="btn-group">
+                    <a href="https://sites.google.com/view/aq2uasim/home?authuser=0" target="_blank" style="font-weight: normal; text-decoration: none; color: #0073e6;"class="btn-rounded">Workshop</a>
+                </div>
                 </p>
             </div>
             <div class="research-image">
@@ -176,11 +217,21 @@
                     an Autonomous Surface Vehicle (ASV).
                 </p>
                 <p>
-                    <a href="https://drive.google.com/file/d/1Cq--xl_xebcai1jV_blnQdpmkO4aRsgT/view?usp=sharing" target="_blank" style="margin-right: 25px;">Video: ocean view</a>
-                    <a href="https://drive.google.com/file/d/1xeWmXyFN09bdwRLnsdtSgEaLt7Jsy6CR/view?usp=sharing" target="_blank" style="margin-right: 25px;">Video: underwater view</a>
-                    <a href=" https://upcommons.upc.edu/handle/2117/411374" target="_blank" style="margin-right: 25px;">Paper</a>
-                    <a href="https://drive.google.com/file/d/11Abxij9UkbnUPIaarp2kMQgWPP8QdAS9/view?usp=sharing" target="_blank" style="margin-right: 25px;">Simulations</a>
                    
+                    <div class="btn-group">
+                        <a href="https://drive.google.com/file/d/1Cq--xl_xebcai1jV_blnQdpmkO4aRsgT/view?usp=sharing" 
+                           target="_blank" class="btn-rounded">Video 1</a>
+                    
+                        <a href="https://drive.google.com/file/d/1xeWmXyFN09bdwRLnsdtSgEaLt7Jsy6CR/view?usp=sharing" 
+                           target="_blank" class="btn-rounded">Video 2</a>
+                    
+                        <a href="https://upcommons.upc.edu/handle/2117/411374" 
+                           target="_blank" class="btn-rounded">Paper</a>
+                    
+                        <a href="https://drive.google.com/file/d/11Abxij9UkbnUPIaarp2kMQgWPP8QdAS9/view?usp=sharing" 
+                           target="_blank" class="btn-rounded">Simulations</a>
+                    </div>
+                    
                 </p>
             </div>
             <div class="research-image">
@@ -199,9 +250,11 @@
                     full-body motion optimization to enhance precision and efficiency during underwater operations.
                 </p>
                 <p>
-                    <a href="https://drive.google.com/file/d/1b4lR98I7R1QkY-ExwY64sltZ-S7DxKYJ/view?usp=drive_link" target="_blank" style="margin-right: 25px;">Video: Reverse IK</a>
-                    <a href="https://drive.google.com/file/d/1F8tQie0gAXsZLo1k3Pm_4Qott_PLFYOf/view?usp=sharing" target="_blank" style="margin-right: 25px;">Video: Simple Grabbing</a>
-                    <a href="https://drive.google.com/file/d/198KKelQk03TQCPycf2F07hBVMIAbMinw/view?usp=sharing" target="_blank">Video: Simple Inspection</a>
+                    <div class="btn-group">
+                    <a href="https://drive.google.com/file/d/1b4lR98I7R1QkY-ExwY64sltZ-S7DxKYJ/view?usp=drive_link" target="_blank" style="margin-right: 10px;" class="btn-rounded">Video: Reverse IK</a>
+                    <a href="https://drive.google.com/file/d/1F8tQie0gAXsZLo1k3Pm_4Qott_PLFYOf/view?usp=sharing" target="_blank" style="margin-right: 10px;" class="btn-rounded">Video: Simple Grabbing</a>
+                    <a href="https://drive.google.com/file/d/198KKelQk03TQCPycf2F07hBVMIAbMinw/view?usp=sharing" target="_blank" class="btn-rounded">Video: Simple Inspection</a>
+                    </div>
                 </p>
             </div>
             <!-- <div class="research-image">
@@ -225,7 +278,9 @@
                     comparable assessments, promoting standardized development in marine robotics.
                 </p>
                 <p>
-                    <a href="https://ieeexplore.ieee.org/abstract/document/10682284" target="_blank" style="font-weight: normal; text-decoration: none; color: #0073e6;">Paper</a>
+                    <div class="btn-group">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10682284" target="_blank" style="font-weight: normal; text-decoration: none; color: #0073e6;"class="btn-rounded">Paper</a>
+                    </div>   
                 </p>
             </div>
             <div class="research-image">
