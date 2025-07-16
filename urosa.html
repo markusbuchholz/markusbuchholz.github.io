@@ -253,7 +253,7 @@
         </div>
 
         <p>
-            UROSA (Underwater Robot Self-Organizing Autonomy) is a new software architecture that reimagines robot autonomy. Traditional robots struggle in complex, unpredictable environments like the ocean because they rely on rigid, pre-programmed rules. UROSA replaces this old paradigm with a collaborative team of intelligent AI agents. Each agent is a specialist in a specific area—like perception, planning, or diagnostics—and they work together within the ROS 2 framework to communicate, reason, and make decisions to handle complex underwater missions with minimal human intervention.
+            <strong>UROSA</strong> (Underwater Robot Self-Organizing Autonomy) is a new software architecture that reimagines robot autonomy. Traditional robots struggle in complex, unpredictable environments like the ocean because they rely on rigid, pre-programmed rules. UROSA replaces this old paradigm with a collaborative team of intelligent AI agents. Each agent is a specialist in a specific area—like perception, planning, or diagnostics—and they work together within the ROS 2 framework to communicate, reason, and make decisions to handle complex underwater missions with minimal human intervention.
         </p>
 
 
@@ -287,12 +287,20 @@
 
         <div class="demonstrations-section">
             <h2>Demonstrations & Key Results</h2>
+<p>
+    UROSA's power comes from a set of key innovations that grant it true cognitive autonomy. Instead of following rigid instructions, the robot can <strong>reason and adapt</strong> to novel problems as they arise. It <strong>learns from experience</strong>, using a memory of past missions to continuously improve its performance and resilience. To handle completely unforeseen challenges, it can even <strong>generate new skills</strong> by autonomously writing, testing, and deploying new software on the fly. Furthermore, the system can <strong>predict its own hardware failures</strong> before they become critical through advanced diagnostics, all while ensuring every action is verifiable and safe within a multi-layered framework.
+</p>
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="media/urosa_shift.png" alt="UROSA Architecture">
+                </div>
+            </div>
             <div class="video-section">
                 <div class="video-item">
                     <h3>Validation of Core Innovations</h3>
-                    <p>
-                        This video showcases the results from several key validation experiments, demonstrating the practical application of UROSA's core innovations. It includes examples of complex multi-agent coordination, where two AUVs autonomously negotiate a collision-free path; a pipe-tracking task where an agent leverages a memory of past visual data to recover from external disturbances; and a demonstration of the on-the-fly "self-repair" capability, where the system autonomously writes and deploys new software to recover from a simulated critical sensor failure.
-                    </p>
+                        <p>
+                            This video showcases the results from several key validation experiments, demonstrating the practical application of UROSA's core innovations. It includes examples of complex multi-agent coordination, where two AUVs autonomously negotiate a collision-free path; a demonstration of online policy refinement, where a "Teacher" agent instructs a "Student" agent to ignore distractions and focus its reports on specific targets; and a demonstration of the on-the-fly "self-repair" capability, where the system autonomously writes and deploys new software to recover from a simulated critical sensor failure.
+                        </p>
                     <div class="video-wrapper">
                         <video controls poster="media/logo_vid_demo.png">
                             <source src="media/JOURNAL_RESULTS_ver_1.mp4" type="video/mp4">
