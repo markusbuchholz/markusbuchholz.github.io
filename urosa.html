@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UROSA Project | Markus Buchholz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .container h1 {
+            font-size: 2.8rem;
+            color: #111;
+            margin-bottom: 20px;
+        }
+        .container h2 {
+            font-size: 2rem;
+            color: #222;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .container p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            text-align: left;
+        }
+        .link-buttons {
+            margin: 30px 0;
+        }
+        .link-buttons a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #0073e6;
+            padding: 15px 30px;
+            border-radius: 5px;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .link-buttons a:hover {
+            background-color: #005bb5;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .image-gallery .image-item {
+            flex-basis: 100%;
+            text-align: center;
+        }
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        .image-gallery p {
+            font-size: 0.9rem;
+            color: #555;
+            text-align: center;
+        }
+        .video-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .video-item {
+            width: 100%;
+            max-width: 800px;
+        }
+        .video-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        footer {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .social-icons img {
+            width: 45px;
+            height: 40px;
+        }
+        .project-logo-container {
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+
+        .project-logo {
+            max-width: 200%; 
+            width: 450px;    
+            height: auto;    
+        }
+        .authors-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee; 
+            text-align: center;
+        }
+        .authors-section h3 {
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .authors-section p {
+            text-align: center; 
+            margin: 5px 0;
+        }
+
+        .authors-section .author-names {
+            font-size: 1.6rem !important;
+            font-weight: bold;
+        }
+        .affiliation {
+            font-size: 1rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .architecture-section, .demonstrations-section {
+            text-align: center; 
+        }
+        .architecture-section p, .demonstrations-section p {
+            text-align: center; 
+            max-width: 800px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+       
+        .video-wrapper {
+            max-width: 800px; 
+            margin: 20px auto 0 auto; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .video-section video {
+            width: 100%; 
+            height: auto;
+            display: block; 
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Underwater Autonomy</h1>
+        <div class="social-icons">
+             </div>
+        <nav>
+            <a href="index.html">About</a>
+            <!-- <a href="research.html">Research</a>
+            <a href="projects.html">Projects</a>
+            <a href="software.html">Software</a>
+            <a href="teach.html">Teaching</a>
+            <a href="cv.html">CV</a> -->
+        </nav>
+    </header>
+
+
+   <div class="container">
+
+        <div class="project-logo-container">
+            <img src="media/urosa_2.png" alt="UROSA" class="project-logo">
+        </div>
+
+        <h1>UROSA: Distributed AI Agents for Cognitive Underwater Robot Autonomy</h1>
+
+        <div class="link-buttons">
+            <a href="[LINK_TO_YOUR_ARXIV_PAPER]" target="_blank">Paper (arXiv)</a>
+            <a href="https://github.com/markusbuchholz/urosa_underwater_autonomy" target="_blank">Code (GitHub)</a>
+            <a href="[LINK_TO_YOUR_MAIN_VIDEO]" target="_blank">Full Video</a>
+        </div>
+        <div class="authors-section">
+            <h3>Authors</h3>
+            <p class="author-names">Markus Buchholz, Ignacio Carlucho, Michele Grimaldi, and Yvan R. Petillot</p>
+            <p class="affiliation">School of Engineering & Physical Sciences, Heriot-Watt University, Edinburgh, UK</p>
+        </div>
+
+        <p>
+            UROSA (Underwater Robot Self-Organizing Autonomy) is a new software architecture that reimagines robot autonomy. Traditional robots struggle in complex, unpredictable environments like the ocean because they rely on rigid, pre-programmed rules. UROSA replaces this old paradigm with a collaborative team of intelligent AI agents. Each agent is a specialist in a specific area—like perception, planning, or diagnostics—and they work together within the ROS 2 framework to communicate, reason, and make decisions to handle complex underwater missions with minimal human intervention.
+        </p>
+
+
+
+               <div class="architecture-section">
+            <h2>System Architecture & Concepts</h2>
+            <p>
+                The UROSA architecture is a distributed cognitive ecosystem. The diagram below illustrates the high-level interaction between the real world, a predictive digital twin, and the core set of intelligent AI agents that perform all reasoning and planning.
+            </p>
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="media/fig_1_ver8.png" alt="UROSA Architecture">
+                </div>
+            </div>
+
+            <div class="video-section">
+                <div class="video-item">
+                    <h3>Architectural Overview Video</h3>
+                    <p>
+                        This video provides a narrated walkthrough of the UROSA architecture. It explains the roles of the key AI agents, the flow of information between the real world and the digital twin, and how the distributed cognitive ecosystem works together to achieve complex missions.
+                    </p>
+                    <div class="video-wrapper">
+                        <video controls poster="media/logo_vid_arch.png">
+                            <source src="media/JOURNAL_ARCH_ver_1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demonstrations-section">
+            <h2>Demonstrations & Key Results</h2>
+            <div class="video-section">
+                <div class="video-item">
+                    <h3>Validation of Core Innovations</h3>
+                    <p>
+                        This video showcases the results from several key validation experiments, demonstrating the practical application of UROSA's core innovations. It includes examples of complex multi-agent coordination, where two AUVs autonomously negotiate a collision-free path; a pipe-tracking task where an agent leverages a memory of past visual data to recover from external disturbances; and a demonstration of the on-the-fly "self-repair" capability, where the system autonomously writes and deploys new software to recover from a simulated critical sensor failure.
+                    </p>
+                    <div class="video-wrapper">
+                        <video controls poster="media/logo_vid_demo.png">
+                            <source src="media/JOURNAL_RESULTS_ver_1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <footer>
+        © 2025 Markus Buchholz | Robotics Researcher
+    </footer>
+</body>
+</html>
