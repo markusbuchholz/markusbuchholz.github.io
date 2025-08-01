@@ -222,6 +222,20 @@
             /* To change the color, adjust this value */
             color: #02025f; /* A professional deep blue */
         }
+        pre {
+            background-color: #eee;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: left;
+            white-space: pre-wrap; /* Allows the text to wrap if needed */
+            word-wrap: break-word;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+        }
         
     </style>
 </head>
@@ -320,6 +334,24 @@
                 </div>
             </div>
         </div>
+
+
+<h2>Citation</h2>
+    <p>If you use <strong>UROSA</strong> in your research, please cite our paper:</p>
+    
+    <div class="citation-container">
+        <pre><code id="bibtex-code">@misc{buchholz2025urosa,
+      title         = {Distributed AI Agents for Cognitive Underwater Robot Autonomy}, 
+      author        = {Markus Buchholz and Ignacio Carlucho and Michele Grimaldi and Yvan R. Petillot},
+      year          = {2025},
+      eprint        = {2507.14099},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.RO},
+      note          = {Under review at the IEEE Journal of Oceanic Engineering.},
+      code          = {https://github.com/markusbuchholz/urosa_underwater_autonomy},
+}</code></pre>
+        <button id="copy-button">Copy</button>
+    </div>
 
     <footer>
         © 2025 Markus Buchholz | Robotics Researcher
