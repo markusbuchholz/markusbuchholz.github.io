@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UROSA Project | Markus Buchholz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .container h1 {
+            font-size: 2.8rem;
+            color: #111;
+            margin-bottom: 20px;
+        }
+        .container h2 {
+            font-size: 2rem;
+            color: #222;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .container p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            text-align: left;
+        }
+        .link-buttons {
+            margin: 30px 0;
+        }
+        .link-buttons a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #0073e6;
+            padding: 15px 30px;
+            border-radius: 5px;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .link-buttons a:hover {
+            background-color: #005bb5;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .image-gallery .image-item {
+            flex-basis: 100%;
+            text-align: center;
+        }
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        .image-gallery p {
+            font-size: 0.9rem;
+            color: #555;
+            text-align: center;
+        }
+        .video-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .video-item {
+            width: 100%;
+            max-width: 800px;
+        }
+        .video-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        footer {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .social-icons img {
+            width: 45px;
+            height: 40px;
+        }
+        .project-logo-container {
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+
+        .project-logo {
+            max-width: 200%; 
+            width: 600px;    
+            height: auto;    
+        }
+        .authors-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee; 
+            text-align: center;
+        }
+        .authors-section h3 {
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .authors-section p {
+            text-align: center; 
+            margin: 5px 0;
+        }
+
+        .authors-section .author-names {
+            font-size: 1.6rem !important;
+            font-weight: bold;
+        }
+        .affiliation {
+            font-size: 1rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .architecture-section, .demonstrations-section {
+            text-align: center; 
+        }
+        .architecture-section p, .demonstrations-section p {
+            text-align: center; 
+            max-width: 800px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+       
+        .video-wrapper {
+            max-width: 800px; 
+            margin: 20px auto 0 auto; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .video-section video {
+            width: 100%; 
+            height: auto;
+            display: block; 
+        }
+        .container p {
+            font-size: 1.3rem; 
+            line-height: 1.7;  
+        }
+        .title-section h1 {
+            font-size: 3.5rem !important;
+            color: #005a9c;
+        }
+        .container h2 {
+            font-size: 2.2rem; 
+            color: #02025f;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        #main-title {
+            /* To change the size, adjust this value */
+            font-size: 3.2rem; 
+
+            /* To change the color, adjust this value */
+            color: #02025f; /* A professional deep blue */
+        }
+        pre {
+            background-color: #eee;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: left;
+            white-space: pre-wrap; /* Allows the text to wrap if needed */
+            word-wrap: break-word;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Autonomous Resilience Agent</h1>
+        <div class="social-icons">
+             </div>
+        <nav>
+            <a href="index.html">Author</a>
+        </nav>
+    </header>
+
+
+   <div class="container">
+
+        <div class="project-logo-container">
+            <img src="media/aura.png" alt="AURA" class="project-logo">
+        </div>
+
+        <h1 id="main-title">Autonomous Resilience Agent</h1>
+
+<div class="link-buttons">
+            <!-- <a href="http://arxiv.org/abs/2507.23735" target="_blank">Paper (arXiv)</a> -->
+            <!-- <a href="https://github.com/markusbuchholz/urosa_underwater_autonomy" target="_blank">Code (GitHub)</a> -->
+            <!-- <a href="media/urosa_presentation_ver_2.pdf" target="_blank">Slides (PDF)</a> -->
+            <!-- <a href="[LINK_TO_YOUR_MAIN_VIDEO]" target="_blank">Video</a> -->
+        </div>
+        <div class="authors-section">
+            <h3>Authors</h3>
+            <p class="author-names">Markus Buchholz, Ignacio Carlucho, and Yvan R. Petillot</p>
+            <p class="affiliation">School of Engineering & Physical Sciences, Heriot-Watt University, Edinburgh, UK</p>
+        </div>
+
+        <!-- <p>
+            <strong>AURA</strong> (Autonomous Resilience Agent) 
+        </p> -->
+        
+
+
+
+        <!-- <div class="architecture-section">
+            <h2>System Architecture & Concepts</h2>
+            <p>
+                The UROSA architecture is a distributed cognitive ecosystem. The diagram below illustrates the high-level interaction between the real world, a predictive digital twin, and the core set of intelligent AI agents that perform all reasoning and planning.
+            </p>
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="media/fig_1_ver8.png" alt="UROSA Architecture">
+                </div>
+            </div>
+
+            <div class="video-section">
+                <div class="video-item">
+                    <h3>Architectural Overview Video</h3>
+                    <p>
+                        This video provides a narrated walkthrough of the UROSA architecture. It explains the roles of the key AI agents, how real-world sensor data is used to continuously update a physics-based simulator to create a high-fidelity digital twin, and how the distributed cognitive ecosystem works together to achieve complex missions.
+                    </p>
+                    <div class="video-wrapper">
+                        <video controls poster="media/logo_vid_arch.png">
+                            <source src="media/JOURNAL_ARCH_ver_2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="demonstrations-section">
+            <h2>Demonstrations & Key Results</h2>
+        <p>
+            UROSA's power comes from a set of key innovations that grant it true cognitive autonomy. Instead of following rigid instructions, the robot can <strong>reason and adapt</strong> to novel problems as they arise. It <strong>learns from experience</strong>, using a memory of past missions to continuously improve its performance and resilience. To handle completely unforeseen challenges, it can even <strong>generate new skills</strong> by autonomously writing, testing, and deploying new software on the fly. Furthermore, the system can <strong>predict its own hardware failures</strong> before they become critical through advanced diagnostics, all while ensuring every action is verifiable and safe within a multi-layered framework.
+        </p>
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="media/urosa_shift.png" alt="UROSA Architecture">
+                </div>
+            </div>
+            <div class="video-section">
+                <div class="video-item">
+                    <h3>Validation of Core Innovations</h3>
+                        <p>
+                            This video showcases the results from several key validation experiments, demonstrating the practical application of UROSA's core innovations. It includes examples of complex multi-agent coordination, where two AUVs autonomously negotiate a collision-free path; a demonstration of online policy refinement, where a "Teacher" agent instructs a "Student" agent to ignore distractions and focus its reports on specific targets; and a demonstration of the on-the-fly "self-repair" capability, where the system autonomously writes and deploys new software to recover from a simulated critical sensor failure.
+                        </p>
+                    <div class="video-wrapper">
+                        <video controls poster="media/logo_vid_demo.png">
+                            <source src="media/JOURNAL_RESULTS_ver_3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+<!-- <h2>Citation</h2>
+    <p>If you use <strong>UROSA</strong> in your research, please cite our paper:</p> -->
+    
+    <!-- <div class="citation-container">
+        <pre><code id="bibtex-code">@misc{buchholz2025urosa,
+      title         = {Distributed AI Agents for Cognitive Underwater Robot Autonomy}, 
+      author        = {Markus Buchholz and Ignacio Carlucho and Michele Grimaldi and Yvan R. Petillot},
+      year          = {2025},
+      eprint        = {2507.14099},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.RO},
+      note          = {Under review at the IEEE Journal of Oceanic Engineering.},
+      code          = {https://github.com/markusbuchholz/urosa_underwater_autonomy},
+      url           = {https://arxiv.org/abs/2507.23735}
+}</code></pre>
+        <button id="copy-button">Copy</button>
+    </div> -->
+
+    <footer>
+        © 2025 Markus Buchholz | Robotics Researcher
+    </footer>
+</body>
+</html>
