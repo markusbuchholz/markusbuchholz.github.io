@@ -162,12 +162,14 @@
     <div class="container">
         <div class="title">Main Software Frameworks</div>
         <div class="intro">
-            I frequently use the following tools and platforms: <strong>ROS 2, C++, Python, Linux, Docker</strong>, and simulation frameworks such as 
-            <strong>StoneFish, GazeboSim, MoveIt2, Matlab, Pinocchio, Crocoddyl, and ArduPilot</strong>. Here, I share the primary software frameworks 
-            I’ve developed that may assist in algorithm prototyping, system debugging, and various research or engineering efforts. 
-            I encourage you to explore my <a href="https://github.com/markusbuchholz" target="_blank" style="color: #0073e6; text-decoration: none;">GitHub</a> 
-            for additional repositories and resources. 
-            While similar tools exist, I hope my frameworks provide a unique and valuable approach.
+            I build open-source tools and frameworks that bridge cutting-edge research and real-world robotics engineering.
+            My software stack spans <strong>ROS 2, C++, Python, Linux, Docker</strong>, and simulators such as
+            <strong>StoneFish, GazeboSim, MoveIt2, MATLAB, Pinocchio, Crocoddyl, and ArduPilot</strong>.
+            The frameworks below are designed to accelerate prototyping, simplify reproducibility, and help other researchers
+            and engineers move faster from idea to field deployment. I encourage you to explore my
+            <a href="https://github.com/markusbuchholz" target="_blank" style="color: #0073e6; text-decoration: none;">GitHub</a>
+            for additional repositories—many of these tools grew directly out of problems I solved building robots for
+            offshore, underwater, and industrial applications.
         </div>
 
 
@@ -176,9 +178,10 @@
             <div class="software-text">
                 <h2>Marine Robotics Simulation Framework</h2>
                 <p>
-                    This repository offers a simulation framework designed to evaluate motion control in tethered multi-robot systems operating within dynamic marine environments.
-                    Specifically, it focuses on the coordinated operation of an Autonomous Underwater Vehicle (AUV) and an Autonomous Surface Vehicle (ASV).
-                    The framework utilizes GazeboSim, enhanced with realistic marine environment plugins and ArduPilot's Software-in-the-Loop (SITL) mode.
+                    This open-source simulation framework is built to study and validate motion control for tethered multi-robot teams in realistic marine conditions.
+                    It combines GazeboSim with high-fidelity environmental plugins and ArduPilot Software-in-the-Loop (SITL), letting researchers test coordinated AUV-ASV behavior
+                    before committing hardware to the water. I developed it to close the loop between control theory and sea-ready robotics, making it easier to iterate on algorithms
+                    that must survive waves, currents, and tether coupling.
                 </p>
                 <p>
                     <div class="btn-group">
@@ -200,9 +203,9 @@
             <div class="software-text">
                 <h2>StoneFish ROS 2 Marine Robotics Simulator</h2>
                 <p>
-                    The repository provides a Docker container with a bash scripts that can seamlessly build and run the container.
-                    Docker container offers ROS 2 environment whare you can launch vehicles in <a href="https://stonefish.readthedocs.io/en/latest/" target="_blank" style="color: #0073e6; text-decoration: none;">StoneFish</a>.
-                    The repository provides all necessary commands and references that can boost your software's research and development process, which utilizes the ROS 2 stack.
+                    This repository packages a complete ROS 2 + StoneFish marine simulation environment inside a Docker container, with bash scripts that build and run everything in one step.
+                    It lowers the barrier to reproducing high-fidelity underwater robotics experiments by providing the exact toolchain, commands, and references I use in my own research.
+                    If you are working on control, perception, or autonomy for underwater vehicles, this is a fast way to get from idea to simulation.
                 </p>
                 <p>
                     <div class="btn-group">
@@ -221,8 +224,9 @@
             <div class="software-text">
                 <h2>BlueROV2 simulation SITL in Gazebo</h2>
                 <p>
-                    The following simulation environment offers the BlueROV2 simulation SITL with GazeboSim. 
-                    Users can plan complex missions using ROS 2, ArduPilot or QGroundControl by defining waypoints and survey grids.
+                    A full simulation environment for the BlueROV2 running Software-in-the-Loop with GazeboSim and ArduPilot.
+                    It lets you plan and execute realistic inspection missions using ROS 2, ArduPilot, or QGroundControl, including waypoint navigation and survey patterns.
+                    I use this stack to prototype control and autonomy algorithms for underwater vehicles before moving them to real ROV deployments.
                 </p>
                 <p><div class="btn-group">
                     <a href="https://github.com/markusbuchholz/gazebosim_bluerov2_ardupilot_sitl?tab=readme-ov-file" target="_blank" style="margin-right: 25px;"class="btn-rounded">GitHub</a>
@@ -240,7 +244,8 @@
             <div class="software-text">
                 <h2>Sailboat simulation</h2>
                 <p>
-                    Software provides the simulator of Sailboat RS750 in the GazeboSim simulator.
+                    A GazeboSim-based simulator for the RS750 sailboat, built to test sailing dynamics, control strategies, and autonomous behavior in a realistic physics environment.
+                    It is a useful testbed for anyone working on wind-driven marine robotics and energy-aware path planning.
                 </p>
                 <p><div class="btn-group">
                     <a href="https://github.com/markusbuchholz/sailboat_simulator" target="_blank" style="margin-right: 25px;"class="btn-rounded">GitHub</a>
@@ -258,10 +263,9 @@
             <div class="software-text">
                 <h2>BlueBoat Dynamic Model with Disturbances (MPC, PID)</h2>
                 <p>
-                    This repository provides a comprehensive dynamic model of BlueBoat implemented in C++.
-                    The model with environmental disturbances (waves, wind, and ocean currents) uses the Runge-Kutta method to solve the differential equations governing the ASV's motion.
-                    Additionally, the repository includes a Simulink model equipped with PID controllers, which allows for parameter autotuning to optimize the ASV's performance.
-                    The C++ program also includes MPC and PID controller, allowing for consistent control strategies across different platforms.
+                    This repository provides a high-fidelity C++ dynamic model of the BlueBoat ASV, including environmental disturbances from waves, wind, and ocean currents.
+                    The equations of motion are integrated with Runge-Kutta methods, and the repository ships with both C++ and Simulink implementations of MPC and PID controllers,
+                    plus autotuning support. It is designed as a single, consistent control-design testbed that spans rapid simulation and real-world deployment.
                 </p>
                 <p><div class="btn-group">
                     <a href="https://github.com/markusbuchholz/blueboat_dynamics" target="_blank" style="margin-right: 25px;"class="btn-rounded">GitHub</a>
@@ -279,8 +283,8 @@
             <div class="software-text">
                 <h2>BlueBoat simulation SITL with GazeboSim</h2>
                 <p>
-                    The following simulation environment offers the BlueBoat simulation SITL with GazeboSim. 
-                    Users can plan complex missions using ROS 2, ArduPilot or QGroundControl by defining waypoints and survey grids.
+                    A complete GazeboSim + ArduPilot SITL environment for the BlueBoat ASV, enabling realistic mission planning and autonomy testing over ROS 2, ArduPilot, or QGroundControl.
+                    It supports waypoint missions, survey grids, and sensor-driven behaviors, and serves as my standard bridge between controller design in simulation and validation on the real boat.
                 </p>
                 <p>
                     <div class="btn-group">
@@ -299,8 +303,9 @@
             <div class="software-text">
                 <h2>ROS2 and Moveit for manipulators</h2>
                 <p>
-                    This repository provides the Docker container to run ROS 2 with Moveit.
-                    You can find simple programs to move the robot in joint space and working space.
+                    A Dockerized ROS 2 + MoveIt setup for manipulator research and education.
+                    It includes clean example programs for moving robots in joint space and Cartesian task space, making it a fast starting point for motion-planning experiments,
+                    industrial integration, or teaching modern manipulation pipelines.
                 </p>
                 <p>
                     <div class="btn-group">
@@ -319,14 +324,12 @@
             <div class="software-text">
                 <h2>Reinforcement Learning Path Planner for 6DOF Robot</h2>
                 <p>
-                    This framework demonstrates how to simulate a Doosan collaborative robot in ROS 2 for motion planning using reinforcement learning. 
-                    A reinforcement learning agent calculates an optimal path in Cartesian space, avoiding obstacles. The solution integrates numerical 
-                    Inverse Kinematics to compute the robot's joint positions, which are sent to the robot controller to execute the motion.
+                    This framework shows how to train a reinforcement learning agent to plan collision-free paths for a Doosan collaborative robot directly in Cartesian space,
+                    then execute them through ROS 2. The agent learns to move between targets while avoiding obstacles, and numerical inverse kinematics converts the planned path into executable joint commands.
                 </p>
                 <p>
-                    The planner identifies optimal paths between two points (A and B) while avoiding obstacles, leveraging the Bellman equation for path computation. 
-                    This approach contrasts with traditional algorithms like A*, which operates in joint space. For further insights, refer to my article 
-                    and implementation examples.
+                    The method is based on the Bellman optimality principle and explores a fundamentally different path-planning philosophy than classic joint-space planners like A*.
+                    It is a practical example of how learning-based motion planning can be integrated with real robot controllers.
                 </p>
                 <p>
                     <div class="btn-group">
@@ -347,9 +350,9 @@
             <div class="software-text">
                 <h2>Build Linux Kernel</h2>
                 <p>
-                    This repository provides information about building a custom Linux distribution and covers both the technical understanding and practical implementation.
-                    The steps include compiling the Linux kernel in a Docker container and integrating a minimalist environment using BusyBox. The system can be booted using QEMU.
-                    The diagram below summarizes the methodology of creating a custom Linux distribution by leveraging the modularity of BusyBox and the Linux Kernel.
+                    This repository documents how to build a minimal Linux distribution from source, combining deep systems understanding with hands-on implementation.
+                    It walks through compiling the Linux kernel inside Docker, integrating a BusyBox userland, and booting the result in QEMU.
+                    It is a useful resource for anyone who wants to understand what really happens below the ROS 2 stack in real-time robotics systems.
                 </p>
                 <p><div class="btn-group">
                     <a href="https://medium.com/@markus-x-buchholz/build-your-own-linux-distribution-a-kernel-compilation-and-virtualization-c8ce0f9808f6" target="_blank" style="margin-right: 25px;"class="btn-rounded">Article</a>

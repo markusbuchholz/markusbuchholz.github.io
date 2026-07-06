@@ -162,7 +162,11 @@
     <div class="container">
         <div class="title">My Research</div>
         <div class="interests">
-            My research interests primarily involve autonomous systems, robot motion control, whole-body dynamics, trajectory optimization, and simulations.
+            My research sits at the intersection of autonomous systems, AI-driven robot control, whole-body dynamics,
+            trajectory optimization, and high-fidelity simulation. I focus on making robots operate reliably in unstructured,
+            high-risk environments—particularly underwater and maritime systems—where theory has to meet the real world.
+            My long-term goal is to build intelligent, resilient robotic systems that can reason, adapt, and collaborate
+            with humans under uncertainty.
         </div>
 
 
@@ -170,7 +174,10 @@
             <div class="research-text">
                 <h2>A Collaborative Reasoning Framework for Anomaly Diagnostics in Underwater Robotics</h2>
                 <p>
-                <strong>AURA</strong> (Autonomous Resilience Agent) is an AI framework for managing underwater vehicles. Through Human-in-the-Loop Distillation, it translates sensor data into problems, collaborates with operators on solutions, and retains expert insights as lasting knowledge-evolving into an adaptive, trustworthy partner for resilient human-robot teams. This work, accepted to IROS 2026, introduces a novel approach to anomaly diagnostics in underwater robotics, enhancing the reliability and efficiency of autonomous systems in challenging environments.
+                <strong>AURA</strong> (Autonomous Resilience Agent) is an AI framework I developed to help operators manage underwater vehicles when things go wrong.
+                Using Human-in-the-Loop Distillation, it translates noisy sensor data into clear anomaly hypotheses, works with the operator to diagnose root causes,
+                and retains that expertise so the system keeps getting smarter. This creates an adaptive, explainable partner for resilient human-robot teams in safety-critical marine missions.
+                Accepted to IROS 2026, AURA is part of my broader research direction: building AI that does not merely classify sensor readings, but reasons about them and explains its conclusions.
                 </p>
 
                 <p><div class="btn-group">
@@ -190,7 +197,10 @@
             <div class="research-text">
                 <h2>Distributed AI Agents for Cognitive Underwater Robot Autonomy</h2>
                 <p>
-                    <strong>UROSA (Underwater Robot Self-Organizing Autonomy)</strong> is a new software architecture that reimagines robot autonomy. Traditional robots struggle in complex, unpredictable environments like the ocean because they rely on rigid, pre-programmed rules. UROSA replaces this old paradigm with a collaborative team of intelligent AI agents.
+                    <strong>UROSA (Underwater Robot Self-Organizing Autonomy)</strong> is a new software architecture I created to rethink how underwater robots make decisions.
+                    Instead of hard-coding every behavior, UROSA uses a team of specialized AI agents that share information, negotiate plans, and adapt collectively as the mission evolves.
+                    This is a deliberate move away from brittle, rule-based autonomy toward genuinely cognitive underwater systems that can handle the unexpected without waiting for a human to micromanage them.
+                    It combines distributed AI, multi-agent coordination, and robust control into an architecture designed for the unpredictability of the ocean.
                 </p>
 
                 <p><div class="btn-group">
@@ -211,15 +221,15 @@
             <div class="research-text">
                 <h2>Postdoctoral Research Project: Robots UNITE for Offshore Wind Farm Maintenance</h2>
                 <p>
-                    This research explores the development of an autonomous wind farm inspection and maintenance system, leveraging a multi-agent robotic framework. 
-                    The system integrates an Autonomous Underwater Vehicle (AUV), an Autonomous Surface Vehicle (ASV),
-                    and a robotic arm to collaboratively perform inspection and maintenance tasks on offshore wind farms.
+                    This postdoctoral research targets one of the hardest automation problems in the energy sector: maintaining offshore wind farms without sending people to sea.
+                    I developed a multi-agent robotic framework that coordinates an Autonomous Underwater Vehicle (AUV), an Autonomous Surface Vehicle (ASV),
+                    and a robotic manipulator into a single, cooperative inspection and maintenance system.
                 </p>
                 <p>
-                    The project focuses on designing and developing advanced software and autonomous control frameworks to achieve reliable and efficient
-                    operation in harsh marine environments. Key challenges addressed include dynamic disturbance rejection, coordinated multi-agent control,
-                    and real-time decision-making under uncertainty. This research also investigates the feasibility of deploying such systems for sustainable offshore wind farm maintenance,
-                    aiming to reduce human intervention and operational costs.
+                    The work combines advanced software architectures, autonomous control, and marine dynamics to keep robots operating reliably in harsh offshore conditions.
+                    Core technical contributions include dynamic disturbance rejection, tightly coordinated multi-agent control, and real-time decision-making under uncertainty.
+                    Beyond the algorithms, the project evaluates the real-world feasibility of uncrewed wind farm maintenance, with the potential to cut operational costs,
+                    reduce human risk, and lower the carbon footprint of crewed service vessels.
                 </p>
                 <p><div class="btn-group">
                     <a href="https://arxiv.org/abs/2508.02287" target="_blank" style="margin-right: 25px;" class="btn-rounded">Paper 1 (arXiv)</a>
@@ -242,12 +252,15 @@
             <div class="research-text">
                 <h2>Motion Control for Tethered Multi-Robot Systems in Marine Environments with Disturbances</h2>
                 <p>
-                    This paper presents a novel framework for motion control in tethered multi-robot systems in dynamic marine 
-                    environments, specifically addressing the coordination between an Autonomous Underwater Vehicle (AUV) and 
-                    an Autonomous Surface Vehicle (ASV).
+                    Operating a tethered underwater robot from a surface vehicle is deceptively difficult: every wave and current acting on the ASV is transmitted straight to the AUV through the cable.
+                    This work introduces a novel motion-control framework that explicitly models and compensates for these coupled disturbances, enabling an Autonomous Underwater Vehicle (AUV) and
+                    Autonomous Surface Vehicle (ASV) to operate as a single coordinated system in real marine conditions.
                 </p>
                 <p>
-                   
+                    The approach bridges nonlinear marine dynamics, multi-robot coordination, and robust control to keep the tethered team stable and purposeful despite waves, wind, and currents.
+                    It is a direct contribution to making tethered marine robotics dependable enough for field operations.
+                </p>
+                <p>
                     <div class="btn-group">
                         <a href="https://drive.google.com/file/d/1Cq--xl_xebcai1jV_blnQdpmkO4aRsgT/view?usp=sharing" 
                            target="_blank" class="btn-rounded">Video 1</a>
@@ -275,7 +288,7 @@
             <div class="research-text">
                 <h2>Underwater Manipulation</h2>
                 <p>
-                    This research focuses on underwater manipulation, incorporating context-aware behavior learning with heuristic motion memory. The objectives include enhancing precision and efficiency during underwater operations by developing a motion planner that reduces computation time and improves motion recovery, especially when sensor data is unavailable. This work, accepted to IROS 2025, introduces a novel approach to trajectory and full-body motion optimization for underwater vehicle-manipulator systems.
+                    This research focuses on underwater manipulation, combining context-aware behavior learning with heuristic motion memory. The goal is to push precision and efficiency in real subsea operations by developing motion planners that recover gracefully when sensors fail and compute fast enough to run onboard. Accepted to IROS 2025, this work advances trajectory and full-body motion optimization for underwater vehicle-manipulator systems operating in harsh, partially observable environments.
                 </p>
                 <p>
                     <div class="btn-group">
@@ -297,10 +310,11 @@
             <div class="research-text">
                 <h2>URoBench: Comparative Analyses of Underwater Robotics Simulators from a Reinforcement Learning Perspective</h2>
                 <p>
-                    This paper introduces URoBench, a modular benchmarking framework to standardize the evaluation of 
-                    Reinforcement Learning (RL) algorithms across underwater robotics simulators. By testing three simulators 
-                    (HoloOcean, Dave, and Stonefish) under RL conditions, it demonstrates the feasibility of consistent and 
-                    comparable assessments, promoting standardized development in marine robotics.
+                    This paper introduces URoBench, a modular benchmarking framework to standardize the evaluation of
+                    Reinforcement Learning (RL) algorithms across underwater robotics simulators. By rigorously testing HoloOcean,
+                    Dave, and Stonefish under identical RL conditions, it demonstrates that fair, comparable, and reproducible
+                    evaluation is possible in marine robotics—something the community needs to move learning-based methods from
+                    simulation to sea trials.
                 </p>
                 <p>
                     <div class="btn-group">
