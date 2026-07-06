@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+        font-size: 1.5rem;
+         margin: 0;
+        }
+        header nav a {
+        font-weight: bold;
+        }
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .interests {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .research {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .research-text {
+            flex: 1 1 60%;
+        }
+        .research-text h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        .research-text p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .research-text a {
+            text-decoration: none;
+            color: #0073e6;
+            font-size: 1rem;
+            margin-right: 15px;
+        }
+        .research-image {
+            flex: 1 1 35%;
+            text-align: center;
+        }
+        .research-image img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .social-icons img {
+            width: 45px; /* Enlarged the icons */
+            height: 40px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+        .btn-rounded {
+            display: inline-block;
+            background-color: #1f5c6e; /* Button color (teal) */
+            color: #ffffff !important; /* Ensure text is always white */
+            font-size: 0.7rem; /* Reduced font size */
+            line-height: 1; /* Adjusted line height for smaller text */
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 6px 14px; /* Reduced padding for smaller button */
+            border: none;
+            border-radius: 20px; /* Slightly smaller border radius */
+            text-decoration: none;
+            margin-right: 10px; /* Adjusted margin */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-rounded:visited,
+        .btn-rounded:active,
+        .btn-rounded:focus {
+            color: #ffffff !important; /* Always white text on all states */
+        }
+
+        .btn-rounded:hover {
+            background-color: #174652; /* Darker shade on hover */
+            color: #ffffff !important; /* Ensure text stays white on hover */
+            transform: scale(1.05); /* Slight scale on hover */
+            cursor: pointer;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px; /* Reduced space between buttons */
+            flex-wrap: wrap; /* Wrap buttons if screen is narrow */
+        }
+
+        .meta {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Workshops</h1>
+        <div class="social-icons">
+            <a href="https://github.com/markusbuchholz" target="_blank"><img src="media/github_logo.png" alt="GitHub"></a>
+            <a href="https://medium.com/@markus-x-buchholz" target="_blank"><img src="media/medium_logo.png" alt="Medium"></a>
+            <a href="https://www.linkedin.com/in/markusbuchholz" target="_blank"><img src="media/linkedin_logo.png" alt="LinkedIn"></a>
+            <a href="mailto:markus.x.buchholz@gmail.com" target="_blank"><img src="media/gmail_logo.png" alt="Gmail"></a>
+        </div>
+        <nav>
+            <a href="index.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="workshops.html">Workshops</a>
+            <a href="projects.html">Projects</a>
+            <a href="software.html">Software</a>
+            <a href="teach.html">Teaching</a>
+            <a href="cv.html">CV</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="title">Workshops & Events</div>
+        <div class="interests">
+            I organize and co-organize workshops focused on simulation, benchmarking, and advancing autonomy for maritime and underwater robotics.
+        </div>
+
+        <!-- Workshop 2026 -->
+        <div class="research">
+            <div class="research-text">
+                <h2>AQ²UASIM v2 — Simulators for Maritime Applications</h2>
+                <p class="meta">
+                    <strong>IROS 2026</strong> &nbsp;|&nbsp; October 1st, 2026 &nbsp;|&nbsp; David L. Lawrence Convention Center, Pittsburgh, USA
+                </p>
+                <p>
+                    <strong>AQ²UASIM: Advancing Quantitative and QUAlitative SIMulators for marine applications v2</strong>
+                    continues the effort to lower the barriers to entry in underwater robotics by promoting realistic,
+                    open-source simulators for designing, testing, and optimizing control strategies, autonomy stacks, and
+                    software architectures.
+                </p>
+                <p>
+                    This edition is endorsed as an official activity of the
+                    <strong>United Nations Decade of Ocean Science for Sustainable Development</strong>.
+                </p>
+                <p>
+                    Organizing committee: Michele Grimaldi, Dr. Ignacio Carlucho, Dr. Markus Buchholz, Jungseok Hong,
+                    Dr. Mabel Zhang, Sebastian Realpe Rua, Dr. Fausto Ferreira, Sumer Tuncay, Carter Noh,
+                    Carlo Cernicchiaro, Tony Jacob, and Hayat Rajani.
+                    Steering committee: Dr. Maria Koskinopoulou, Dr. Nuno Gracias, and Prof. Yvan R. Petillot.
+                </p>
+                <p>
+                    <div class="btn-group">
+                        <a href="https://sites.google.com/view/aquasim-v2" target="_blank" class="btn-rounded">Workshop Website</a>
+                        <a href="https://easychair.org/conferences/?conf=aquasimv2" target="_blank" class="btn-rounded">Submission Link</a>
+                    </div>
+                </p>
+            </div>
+            <div class="research-image">
+                <img src="media/aqua2.png" alt="AQ²UASIM v2 Maritime Simulators Workshop" style="width: 100%; height: 50%; max-height: 500px; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+
+        <!-- Workshop 2025 -->
+        <div class="research">
+            <div class="research-text">
+                <h2>ICRA 2025 Workshop — Simulators for Maritime Applications</h2>
+                <p class="meta">
+                    <strong>ICRA 2025</strong> &nbsp;|&nbsp; Atlanta, USA
+                </p>
+                <p>
+                    This workshop aimed to encourage innovative research into simulation environments that provide enough
+                    realism to be invaluable for system design, risk assessment, and performance optimization in maritime
+                    and underwater robotics.
+                </p>
+                                <p>
+                    Organizing committee: Michele Grimaldi, Dr. Ignacio Carlucho, Dr. Markus Buchholz,
+                    Dr. Mabel Zhang, Se Dr. Fausto Ferreira, 
+                    Steering committee: Dr. Maria Koskinopoulou, Prof. Yvan R. Petillot.
+                </p>
+                <p>
+                    <div class="btn-group">
+                        <a href="https://sites.google.com/view/aq2uasim/home?authuser=0" target="_blank" class="btn-rounded">Workshop Website</a>
+                    </div>
+                </p>
+            </div>
+            <div class="research-image">
+                <img src="media/workshop.png" alt="ICRA 2025 Simulators for Maritime Applications Workshop" style="width: 100%; height: 50%; max-height: 500px; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        © 2024 Markus Buchholz | Robotics Researcher
+    </footer>
+</body>
+</html>
