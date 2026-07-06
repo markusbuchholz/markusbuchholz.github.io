@@ -271,7 +271,7 @@
         </div>
 
         <p>
-        <strong>AURA</strong> (Autonomous Resilience Agent) is an AI framework for managing underwater vehicles. Through Human-in-the-Loop Distillation, it translates sensor data into problems, collaborates with operators on solutions, and retains expert insights as lasting knowledge-evolving into an adaptive, trustworthy partner for resilient human-robot teams. 
+        <strong>AURA</strong> (Autonomous Resilience Agent) is an AI framework I developed to help operators manage underwater vehicles when things go wrong. Using Human-in-the-Loop Distillation, it translates noisy sensor data into clear anomaly hypotheses, works with the operator to diagnose root causes through a natural dialog, and retains that expertise as structured knowledge. Over time, AURA becomes an adaptive, trustworthy partner for resilient human-robot teams — one that learns from each interaction rather than repeating the same diagnostic workflow from scratch.
         </p>
         
 
@@ -280,7 +280,7 @@
         <div class="architecture-section">
             <h2>AURA Concept</h2>
             <p>
-                The AURA (Autonomous Resilience Agent) framework functions as a distributed cognitive ecosystem for Anomaly Diagnostics. As illustrated in the diagram below, AURA's core process is to analyze RAW data from the Physical AUV (Observed State), compare it against the Digital Twin (Expected State) to find problems, and turn that complex data into a clear, human-understandable diagnostic output via a collaborative dialog with the operator.
+                AURA functions as a distributed cognitive ecosystem for anomaly diagnostics. As shown in the diagram below, its core process is to analyze raw sensor data from the physical AUV (the observed state), compare it against a physics-based Digital Twin (the expected state) to detect discrepancies, and turn those complex signals into a clear, human-understandable diagnostic through a collaborative dialog with the operator. The design intentionally keeps the human in the loop: the agent proposes, the operator confirms or corrects, and the system remembers.
             </p>
             <div class="image-gallery">
                 <div class="image-item">
@@ -292,7 +292,7 @@
                 <div class="video-item">
                     <h3>Architectural Overview Video</h3>
                     <p>
-                    This video provides a narrated walkthrough of the AURA: Autonomous Resilience Agent framework, which is a Collaborative Reasoning Framework for Anomaly Diagnostics in Underwater Robotics. It explains how AURA translates complex raw data into clear, insightful problem descriptions for the human operator. The architecture is detailed, showing how the system compares the Physical AUV (Observed State) to its Digital Twin (Expected State) to spot anomalies. Crucially, the video explains the collaborative roles of the two AI agents (Agent A and Agent B) and the Vector Database (VDB) in an innovative learning cycle that significantly improves the diagnostic quality and reduces operator workload after just a single human-AI interaction.
+                    This video provides a narrated walkthrough of the AURA framework for anomaly diagnostics in underwater robotics. It explains how AURA translates complex raw sensor data into clear, actionable problem descriptions for the human operator, and details the architecture that compares the physical AUV (observed state) to its Digital Twin (expected state) to spot anomalies. Crucially, the video shows the collaborative roles of the two AI agents and the Vector Database in a learning cycle that significantly improves diagnostic quality and reduces operator workload after just a single human-AI interaction.
                     </p>
                     <div class="video-wrapper">
                         <video controls poster="media/logo_aura_vid.png">
@@ -343,14 +343,14 @@
       archivePrefix = {arXiv},
       primaryClass  = {cs.RO},
       note          = {Under review at the ICRA 2026.},
-      code          = {https://github.com/markusbuchholz/urosa_underwater_autonomy},
+      code          = {https://github.com/markusbuchholz/aura_underwater},
       url           = {https://arxiv.org/abs/2511.03075}
 }</code></pre>
         <button id="copy-button">Copy</button>
     </div> 
 
     <footer>
-        © 2025 Markus Buchholz | Robotics Researcher
+        © 2026 Markus Buchholz | Robotics Researcher
     </footer>
 </body>
 </html>
