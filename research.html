@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research</title>
+    <title>Research | Markus Buchholz</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -170,11 +170,12 @@
     <div class="container">
         <div class="title">My Research</div>
         <div class="interests">
-            My research sits at the intersection of autonomous systems, AI-driven robot control, whole-body dynamics,
-            trajectory optimization, and high-fidelity simulation. I focus on making robots operate reliably in unstructured,
-            high-risk environments-particularly underwater and maritime systems-where theory has to meet the real world.
-            My long-term goal is to build intelligent, resilient robotic systems that can reason, adapt, and collaborate
-            with humans under uncertainty.
+            My research sits at the intersection of control theory and autonomous systems - nonlinear and whole-body
+            dynamics, trajectory optimization, and AI-driven planning, tested in high-fidelity simulation before it
+            ever touches hardware. I focus on making robots operate reliably in unstructured, high-risk environments,
+            particularly underwater and maritime systems, where theory has to survive contact with the real world.
+            My long-term goal is to build intelligent, resilient autonomous systems that can reason, adapt, and
+            collaborate with humans under uncertainty.
         </div>
 
 
@@ -329,6 +330,29 @@
         </div>
 
 
+        <!-- Teleoperation -->
+        <div class="research">
+            <div class="research-text">
+                <h2>Teleoperation of an Underwater Vehicle-Manipulator System</h2>
+                <p>
+                    A hybrid teleoperation setup for controlling an underwater vehicle and its manipulator together: a joystick drives the AUV, while a webcam tracks the operator's hand in real time to open and close the gripper and set the end-effector position. Hand tracking and depth estimation run through my <strong>camera_depth_ros2</strong> pipeline, and the arm motion is planned and executed with <strong>ros2_moveit_manipulators</strong> using MoveIt 2. The system was tested in a pool with the physical AUV and manipulator before moving to open water.
+                </p>
+                <p>
+                    <div class="btn-group">
+                        <a href="https://github.com/markusbuchholz/camera_depth_ros2" target="_blank" class="btn-rounded">camera_depth_ros2</a>
+                        <a href="https://github.com/markusbuchholz/ros2_moveit_manipulators" target="_blank" class="btn-rounded">ros2_moveit_manipulators</a>
+                    </div>
+                </p>
+            </div>
+            <div class="research-image">
+                <div style="display: flex; gap: 10px;">
+                    <img src="media/tele_1.gif" alt="Underwater vehicle-manipulator teleoperation, view 1" style="width: 50%; height: auto; border-radius: 8px;">
+                    <img src="media/tele_2.gif" alt="Underwater vehicle-manipulator teleoperation, view 2" style="width: 50%; height: auto; border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+
+
         <!-- Research 3 -->
         <div class="research">
             <div class="research-text">
@@ -356,7 +380,7 @@
 
     </div>
     <footer>
-        © 2024 Markus Buchholz | Robotics Researcher
+        © 2026 Markus Buchholz | Autonomous Systems & Control
     </footer>
 </body>
 </html>
