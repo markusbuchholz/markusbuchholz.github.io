@@ -46,8 +46,9 @@
         }
         .title {
             text-align: center;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
+            color: #111;
             margin-bottom: 20px;
         }
         .intro {
@@ -143,7 +144,11 @@
             flex-wrap: wrap; /* Wrap buttons if screen is narrow */
         }
 
-    </style>
+            header nav a.active {
+            color: #0073e6;
+            text-decoration: underline;
+        }
+</style>
     </style>
 </head>
 <body>
@@ -162,7 +167,7 @@
             <a href="urosa.html">UROSA</a>
             <a href="aura.html">AURA</a>
             <a href="projects.html">Projects</a>
-            <a href="software.html">Software</a>
+            <a href="software.html" class="active">Software</a>
             <a href="teach.html">Teaching</a>
             <a href="cv.html">CV</a>
         </nav>
