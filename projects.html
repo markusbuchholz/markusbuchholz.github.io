@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2720%27 fill=%27%230073e6%27/%3E%3Ctext x=%2750%27 y=%2768%27 font-size=%2755%27 font-family=%27Arial, sans-serif%27 font-weight=%27bold%27 fill=%27white%27 text-anchor=%27middle%27%3EMB%3C/text%3E%3C/svg%3E">
     <title>Projects | Markus Buchholz</title>
     <style>
         body {
@@ -151,6 +152,17 @@
             header nav a.active {
             color: #0073e6;
             text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+            }
+            .project-text, .project-image {
+                flex-basis: 100%;
+            }
+            .project-image {
+                margin-top: 20px;
+            }
         }
 </style>
 </head>
@@ -303,7 +315,7 @@
                     As a core team member on three new ABB industrial manipulator product lines, I worked the full motion-control stack - rigid-body dynamics modeling, kinematic calibration, trajectory optimization, and real-time embedded control software (C++) on ABB IRC5 controllers. This work fed directly into the motion-control core of RobotWare, ABB's robot operating system shared across its entire manipulator range, and into RobotStudio's offline programming and simulation environment. I led development of SafeMove2, ABB's human-robot collaboration safety system, through formal safety certification, and built the Continuous Motion Rig for high-performance drilling operations. I also resolved motion-control issues directly on automotive production lines at BMW, Volkswagen, and Mercedes-Benz, and collaborated with engineering teams across Norway, Sweden, Germany, and China on motion-control architecture.
                 </p>
                 <div class="btn-group">
-                    <a href="https://www.youtube.com/watch?v=ahxGFTHwg5s" target="_blank" class="btn-rounded">ABB Paint Process Automation</a>
+                    <a href="https://www.youtube.com/shorts/Mj_D68vkVJA" target="_blank" class="btn-rounded">ABB Paint Process Automation</a>
                 </div>
             </div>
             <div class="project-image">

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2720%27 fill=%27%230073e6%27/%3E%3Ctext x=%2750%27 y=%2768%27 font-size=%2755%27 font-family=%27Arial, sans-serif%27 font-weight=%27bold%27 fill=%27white%27 text-anchor=%27middle%27%3EMB%3C/text%3E%3C/svg%3E">
     <title>UROSA Project | Markus Buchholz</title>
     <style>
         body {
@@ -153,9 +154,9 @@
         }
 
         .project-logo {
-            max-width: 200%; 
-            width: 600px;    
-            height: auto;    
+            max-width: 100%;
+            width: 600px;
+            height: auto;
         }
         .authors-section {
             margin-top: 40px;
@@ -361,7 +362,7 @@
       title         = {Distributed AI Agents for Cognitive Underwater Robot Autonomy}, 
       author        = {Markus Buchholz and Ignacio Carlucho and Michele Grimaldi and Yvan R. Petillot},
       year          = {2025},
-      eprint        = {2507.14099},
+      eprint        = {2507.23735},
       archivePrefix = {arXiv},
       primaryClass  = {cs.RO},
       note          = {Under review at the IEEE Journal of Oceanic Engineering.},
@@ -370,9 +371,21 @@
 }</code></pre>
         <button id="copy-button">Copy</button>
     </div>
+    </div>
 
     <footer>
         © 2026 Markus Buchholz | Autonomous Systems & Control
     </footer>
+    <script>
+        document.getElementById('copy-button').addEventListener('click', function () {
+            const text = document.getElementById('bibtex-code').innerText;
+            navigator.clipboard.writeText(text).then(function () {
+                const btn = document.getElementById('copy-button');
+                const original = btn.textContent;
+                btn.textContent = 'Copied!';
+                setTimeout(function () { btn.textContent = original; }, 1500);
+            });
+        });
+    </script>
 </body>
 </html>

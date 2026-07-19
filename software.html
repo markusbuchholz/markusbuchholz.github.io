@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Frameworks</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2720%27 fill=%27%230073e6%27/%3E%3Ctext x=%2750%27 y=%2768%27 font-size=%2755%27 font-family=%27Arial, sans-serif%27 font-weight=%27bold%27 fill=%27white%27 text-anchor=%27middle%27%3EMB%3C/text%3E%3C/svg%3E">
+    <title>Software | Markus Buchholz</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -148,8 +149,18 @@
             color: #0073e6;
             text-decoration: underline;
         }
+        @media (max-width: 768px) {
+            .software {
+                flex-direction: column;
+            }
+            .software-text, .software-image {
+                flex-basis: 100%;
+            }
+            .software-image {
+                margin-top: 20px;
+            }
+        }
 </style>
-    </style>
 </head>
 <body>
     <header>
@@ -204,7 +215,7 @@
                 </p>
             </div>
             <div class="software-image">
-                <img src="media/gazebo.gif" alt="Marine Robotics Simulation Framework">
+                <img src="media/gazebo.gif" alt="Tethered multi-robot marine simulation in GazeboSim">
             </div>
         </div>
 
@@ -229,8 +240,8 @@
                 </p>
             </div>
             <div class="software-image">
-                <img src="media/bluerov2.png" alt="Marine Robotics Simulation Framework">
-                <img src="media/gazebo_rov.gif" alt="Marine Robotics Simulation Framework">
+                <img src="media/bluerov2.png" alt="BlueROV2 underwater vehicle">
+                <img src="media/gazebo_rov.gif" alt="BlueROV2 SITL simulation in GazeboSim">
             </div>
         </div>
 
@@ -250,8 +261,8 @@
                 </p>
             </div>
             <div class="software-image">
-                <img src="media/blueboat.png" alt="Marine Robotics Simulation Framework">
-                <img src="media/gazebo_boat.gif" alt="Marine Robotics Simulation Framework">
+                <img src="media/blueboat.png" alt="BlueBoat ASV">
+                <img src="media/gazebo_boat.gif" alt="BlueBoat SITL simulation in GazeboSim">
                 <div style="display: flex; gap: 10px; margin-top: 10px;">
                     <img src="media/lake_blueboat.gif" alt="BlueBoat SITL mission on a lake, view 1" style="width: 50%;">
                     <img src="media/lake_blueboat_2.gif" alt="BlueBoat SITL mission on a lake, view 2" style="width: 50%;">
@@ -274,7 +285,7 @@
                 </p>
             </div>
             <div class="software-image">
-                <img src="media/sailboat.gif" alt="Marine Robotics Simulation Framework">
+                <img src="media/sailboat.gif" alt="RS750 sailboat simulation in GazeboSim">
             </div>
         </div>
 
@@ -295,7 +306,7 @@
                 </p>
             </div>
             <div class="software-image">
-                <img src="media/stonefish.png" alt="Marine Robotics Simulation Framework">
+                <img src="media/stonefish.png" alt="StoneFish ROS 2 marine robotics simulator">
             </div>
         </div>
 
@@ -315,7 +326,7 @@
                 </p>
             </div>
             <div class="software-image">
-                <img src="media/real_blueboat.png" alt="Marine Robotics Simulation Framework">
+                <img src="media/real_blueboat.png" alt="BlueBoat dynamic model with wave, wind, and current disturbances">
             </div>
         </div>
 
@@ -361,7 +372,7 @@
                 </p>
             </div>
             <div class="software-image">
-                <img src="media/moveit.png" alt="Simulation Framework">
+                <img src="media/moveit.png" alt="ROS 2 and MoveIt manipulator setup">
             </div>
         </div>
 
@@ -386,7 +397,7 @@
                 </p>
             </div>
             <div class="software-image">
-                <img src="media/doosan.gif" alt="Simulation Framework">
+                <img src="media/doosan.gif" alt="Reinforcement learning path planner for the Doosan 6DOF robot">
             </div>
         </div>
 

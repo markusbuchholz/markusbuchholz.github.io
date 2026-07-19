@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2720%27 fill=%27%230073e6%27/%3E%3Ctext x=%2750%27 y=%2768%27 font-size=%2755%27 font-family=%27Arial, sans-serif%27 font-weight=%27bold%27 fill=%27white%27 text-anchor=%27middle%27%3EMB%3C/text%3E%3C/svg%3E">
     <title>Teaching | Markus Buchholz</title>
     <style>
         body {
@@ -149,8 +150,18 @@
             color: #0073e6;
             text-decoration: underline;
         }
+        @media (max-width: 768px) {
+            .course {
+                flex-direction: column;
+            }
+            .course-text, .course-image {
+                flex-basis: 100%;
+            }
+            .course-image {
+                margin-top: 20px;
+            }
+        }
 </style>
-    </style>
 </head>
 <body>
     <header>
@@ -295,7 +306,7 @@
         <!-- Course 5 -->
         <div class="course">
             <div class="course-text">
-                <h2>ROS 2 Overview Motion Planning for real applications <br>(at Heriot-Watt University)</span></h2>
+                <h2>ROS 2 Overview Motion Planning for real applications <br>(at Heriot-Watt University)</h2>
                 <p>
                     A lecture I gave for the Robotics Systems Science course at Heriot-Watt University, covering ROS 2 fundamentals and motion-planning methods for real robotic applications.
                     The material connects classroom theory with the software stacks used in current research and industry.
@@ -312,7 +323,7 @@
         <!-- Course 5 -->
         <div class="course">
             <div class="course-text">
-                <h2>Marine Robotics (BlueRobotics) <br>(at Heriot-Watt University)</span></h2>
+                <h2>Marine Robotics (BlueRobotics) <br>(at Heriot-Watt University)</h2>
                 <p>
                     A Heriot-Watt University lecture I prepared on marine robotics, using the BlueRobotics ecosystem as a concrete example.
                     It covers the concepts, sensors, vehicles, and open-source software stacks that underpin modern autonomous surface and underwater systems,
@@ -347,8 +358,6 @@
         </div>
 
     </div>
-
-</div>
 <footer>
     © 2026 Markus Buchholz | Autonomous Systems & Control
 </footer>
