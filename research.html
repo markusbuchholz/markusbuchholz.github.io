@@ -95,6 +95,9 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
+        #manipulation-image, #teleop-image {
+            flex: 0 0 520px;
+        }
         .social-icons {
             display: flex;
             align-items: center;
@@ -160,6 +163,9 @@
             .research-image {
                 margin-top: 20px;
             }
+            #manipulation-image, #teleop-image {
+                flex-basis: 100%;
+            }
         }
 </style>
 </head>
@@ -215,7 +221,7 @@
                 </p>
             </div>
             <div class="research-image">
-                <img src="media/aura.png" alt="AURA Architecture Diagram">
+                <img src="media/aura.png" alt="AURA Architecture Diagram" style="max-width: 70%; height: auto;">
                 <video controls poster="media/logo_aura_vid.png" style="width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
                     <source src="media/AURA_video_ver_3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -241,7 +247,7 @@
                 </p>
             </div>
             <div class="research-image">
-                <img src="media/urosa_2.png" alt="UROSA Architecture Diagram">
+                <img src="media/urosa_2.png" alt="UROSA Architecture Diagram" style="max-width: 70%; height: auto;">
                 <video controls poster="media/logo_vid_arch.png" style="width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
                     <source src="media/JOURNAL_ARCH_ver_2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -355,8 +361,8 @@
                     </div>
                 </p>
             </div>
-            <div class="research-image">
-                 <img src="media/4.gif" alt="Underwater Robots Research" style="max-width: 100%; height: auto;">
+            <div class="research-image" id="manipulation-image">
+                 <img src="media/4.gif" alt="Underwater Robots Research" style="width: 100%; height: auto;">
             </div>
         </div>
 
@@ -375,7 +381,7 @@
                     </div>
                 </p>
             </div>
-            <div class="research-image">
+            <div class="research-image" id="teleop-image">
                 <div style="display: flex; gap: 10px;">
                     <img src="media/tele_1.gif" alt="Underwater vehicle-manipulator teleoperation, view 1" style="width: 50%; height: auto; border-radius: 8px;">
                     <img src="media/tele_2.gif" alt="Underwater vehicle-manipulator teleoperation, view 2" style="width: 50%; height: auto; border-radius: 8px;">
