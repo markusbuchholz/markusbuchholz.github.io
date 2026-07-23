@@ -95,7 +95,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-        #manipulation-image, #teleop-image {
+        #manipulation-image, #teleop-image, #sage-image {
             flex: 0 0 520px;
         }
         .social-icons {
@@ -163,7 +163,7 @@
             .research-image {
                 margin-top: 20px;
             }
-            #manipulation-image, #teleop-image {
+            #manipulation-image, #teleop-image, #sage-image {
                 flex-basis: 100%;
             }
         }
@@ -409,6 +409,32 @@
             <div class="research-image">
                 <img src="media/girona_1.png" alt="Multi-AUV underwater autonomy, view 1" style="width: 100%; height: auto; border-radius: 8px;">
                 <img src="media/girona_2.png" alt="Multi-AUV underwater autonomy, view 2" style="width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
+            </div>
+        </div>
+
+
+        <!-- SAGE -->
+        <div class="research">
+            <div class="research-text">
+                <h2>SAGE (Semantic and Adaptive Generative Ergodicity)</h2>
+                <p>
+                    SAGE is a research project exploring how underwater robots can decide where to look, not just where to go. Instead of flying a fixed lawnmower pattern, the vehicle uses ergodic control to spend its time in proportion to where a target distribution says something interesting might be. That distribution is built live from onboard vision and mission intent, so the robot's coverage behavior updates itself as new detections come in, rather than requiring a full re-plan. The same mechanism can be inverted to keep the vehicle away from a hazard zone or fragile habitat, with no separate avoidance logic needed.
+                </p>
+                <p>
+                    The approach was implemented in ROS 2 and tested on a BlueROV2 Heavy in the Stonefish simulator, on a pipeline inspection task with several candidate anomalies competing for attention. Early results are promising: the vehicle's trajectory tracks the shape of the underlying belief rather than a scripted order, and degrades gracefully if the mission is cut short. This is ongoing work, and the next phase will focus on closing the sim-to-real gap with a physical BlueROV2 trial.
+                </p>
+                <p>
+                    I put together a research note laying out the plan to validate this idea in real underwater conditions, along with a short presentation of the work.
+                </p>
+                <p>
+                    <div class="btn-group">
+                        <a href="media/SAGE_research_note.pdf" target="_blank" class="btn-rounded">Research Note</a>
+                        <a href="media/SAGE_web.mp4" target="_blank" class="btn-rounded">Presentation</a>
+                    </div>
+                </p>
+            </div>
+            <div class="research-image" id="sage-image">
+                <img src="media/sage_1.gif" alt="SAGE ergodic coverage research" style="width: 100%; height: auto; border-radius: 8px;">
             </div>
         </div>
 
