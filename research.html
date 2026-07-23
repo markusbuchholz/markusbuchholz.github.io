@@ -95,7 +95,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-        #manipulation-image, #teleop-image, #sage-image {
+        #manipulation-image, #teleop-image, #sage-image, #bluerov2-image {
             flex: 0 0 520px;
         }
         .social-icons {
@@ -163,7 +163,7 @@
             .research-image {
                 margin-top: 20px;
             }
-            #manipulation-image, #teleop-image, #sage-image {
+            #manipulation-image, #teleop-image, #sage-image, #bluerov2-image {
                 flex-basis: 100%;
             }
         }
@@ -459,6 +459,31 @@
             </div>
             <div class="research-image">
                 <img src="media/urobench.png" alt="RL" style="width: 100%; height: 50%; max-height: 500px; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+
+
+        <!-- BlueROV2 Modeling and Control -->
+        <div class="research">
+            <div class="research-text">
+                <h2>Modeling and Control of the BlueROV2 Heavy: Dynamics, PID, and Model Predictive Control</h2>
+                <p>
+                    Building on the same underwater robotics work, I put together a full technical write-up on modeling and controlling the BlueROV2 Heavy, from first principles to actual hardware commands. It walks through the complete 6-DOF rigid-body and hydrodynamic model of the vehicle, explaining physically what each term means: added mass as displaced water, Coriolis coupling as the same effect that deflects long-range projectiles on a rotating Earth, and restoring forces as the passive righting behavior that keeps the vehicle upright without any controller at all. From there it covers how a desired force and moment gets distributed across the vehicle's eight thrusters, and the often-overlooked final step of converting each thruster force into the PWM pulse the electronics actually expect.
+                </p>
+                <p>
+                    Two control strategies are developed on top of that model: a classical bank of six PID loops, simple and effective for station-keeping, and a Model Predictive Controller that reasons about the coupled, constrained system as a whole and anticipates actuator limits before they're hit. The document is written to be pedagogical rather than just a reference, so a student can rebuild the entire pipeline, from equations of motion to the signal on the wire, rather than treat any part of it as a black box. This is a living document, and it will keep growing as the modeling and control work continues.
+                </p>
+                <p>
+                    This write-up grew out of my postdoctoral research at Heriot-Watt University, and it is meant as a practical resource for understanding the BlueROV2 Heavy's dynamic model together with both PID and MPC control.
+                </p>
+                <p>
+                    <div class="btn-group">
+                        <a href="media/bluerov2_ver2.pdf" target="_blank" class="btn-rounded">Read the Document</a>
+                    </div>
+                </p>
+            </div>
+            <div class="research-image" id="bluerov2-image">
+                <img src="media/blue_dot.gif" alt="BlueROV2 Heavy modeling and control" style="width: 100%; height: auto; border-radius: 8px;">
             </div>
         </div>
 
