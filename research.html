@@ -488,6 +488,31 @@
         </div>
 
 
+        <!-- World Models / Think Before Act -->
+        <div class="research">
+            <div class="research-text">
+                <h2>Neural Surrogate World Models for LLM-Guided MPC</h2>
+                <p>
+                    This one sits outside the underwater robotics work above - it reflects a current interest of mine in World Models rather than a postdoctoral project. Yann LeCun has <a href="https://openreview.net/pdf?id=BZ5a1r-kVsf" target="_blank" style="text-decoration: none; color: #0073e6; margin-right: 0;">argued</a> that a genuinely intelligent agent needs an internal world model: a system that can simulate the likely consequences of an action before taking it, rather than reacting to raw observations one step at a time. That idea - plan by imagining, not by acting first and observing the result - is what this project sets out to test in a small, fully checkable setting.
+                </p>
+                <p>
+                    Another one from the same line of work, this time closer to a game than a robot. I built a "think before you act" agent for a maze navigation task, based on the idea that a controller can plan by simulating candidate futures inside a learned model of the world rather than a physics engine. The agent looks a handful of moves ahead, scores each imagined outcome, and only ever commits to the first step of whichever plan looks best, then repeats the whole process at the next timestep. The trick that makes this fast is replacing the actual simulator with a small neural network trained to imitate it: the network's predictions track the real environment closely enough that the difference is barely visible in the numbers, while planning against it runs about seven times faster than planning against the simulator directly.
+                </p>
+                <p>
+                    What made the project satisfying was how little was needed to get there - three possible moves, two numbers read off an image as a reward signal, and a greedy look-ahead search - small enough that every result could be checked by hand, which is exactly what you want before trusting the same idea on something bigger. An LLM sits on top as the high-level planner, querying this world model to score candidate plans before an MPC controller commits to the next action, rather than using the LLM only for next-token prediction. This is very much a foundation rather than a finished result, and the natural next step is seeing how far the same recipe carries into richer, less toy-like environments.
+                </p>
+                <p>
+                    <div class="btn-group">
+                        <a href="media/Model_Predictive_Control_with_Neural_Surrogate_World_Models.pdf" target="_blank" class="btn-rounded">Read the Document</a>
+                    </div>
+                </p>
+            </div>
+            <div class="research-image">
+                <img src="media/maze.gif" alt="Maze navigation with a neural surrogate world model" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+        </div>
+
+
 
 
     </div>
