@@ -44,10 +44,63 @@
             font-size: 1.15rem;
             margin-left: 20px;
         }
+        .page-layout {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
         .container {
             max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+        .toc-nav {
+            position: sticky;
+            top: 120px;
+            flex: 0 0 220px;
+            width: 220px;
+            max-height: calc(100vh - 140px);
+            overflow-y: auto;
+            margin-top: 50px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-size: 0.85rem;
+        }
+        .toc-nav .toc-title {
+            font-weight: bold;
+            font-size: 0.95rem;
+            color: #111;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .toc-nav a {
+            display: block;
+            padding: 5px 0 5px 10px;
+            color: #666;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            line-height: 1.3;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+        .toc-nav a:hover {
+            color: #0073e6;
+        }
+        .toc-nav a.active {
+            color: #0073e6;
+            border-left-color: #0073e6;
+            font-weight: bold;
+        }
+        @media (max-width: 1150px) {
+            .toc-nav {
+                display: none;
+            }
         }
         .title {
             text-align: center;
@@ -193,6 +246,7 @@
             <a href="cv.html">CV</a>
         </nav>
     </header>
+    <div class="page-layout">
     <div class="container">
         <div class="title">The Major Projects</div>
         <div class="intro">
@@ -203,7 +257,7 @@
         </div>
 
         <!-- Project 1 -->
-        <div class="project">
+        <div class="project" id="project-1">
             <div class="project-text">
                 <!-- <h2>Development of <strong> Robot Pipe Handler</strong> for Fully Automated Drilling Rig (at Canrig Robotics)</h2> -->
                 <h2>
@@ -224,7 +278,7 @@
         </div>
 
         <!-- Project 2 -->
-        <div class="project">
+        <div class="project" id="project-2">
             <div class="project-text">
                 <h2>Development of <strong>7DOF Robot</strong> for Drilling Offshore Rigs<br>(at Canrig Robotics)</h2>
                 <p>I was responsible for the full R&D cycle of a 7-DOF offshore drilling robot deployed on a rig in Norway. That meant advanced robotic motion control, machine-vision integration, high-fidelity simulation, and final commissioning on an active drilling platform in the North Sea — one of the most demanding industrial environments on Earth. I designed the control and perception pipelines, validated them in simulation, and then traveled to the rig to commission the system and tune it until it was production-ready.</p>
@@ -237,7 +291,7 @@
             </div>
         </div>
 
-        <div class="project">
+        <div class="project" id="project-3">
             <div class="project-text">
                 <h2>Robot Vision System (at Canrig Robotics)</h2>
                 <p>
@@ -260,7 +314,7 @@
         
 
         <!-- Project 3 -->
-        <div class="project">
+        <div class="project" id="project-4">
             <div class="project-text">
                 <h2>MotoROS2: ROS 2 Interface (at Yaskawa Robotics)</h2>
                 <p>
@@ -279,7 +333,7 @@
         </div>
 
         <!-- Project 4 -->
-        <div class="project">
+        <div class="project" id="project-5">
             <div class="project-text">
                 <h2>MOTOMAN NEXT Robot Controller (at Yaskawa Robotics)</h2>
                 <p>
@@ -295,7 +349,7 @@
         </div>
 
         <!-- Project 5 -->
-        <div class="project">
+        <div class="project" id="project-6">
             <div class="project-text">
                 <h2>IRB5500 Paint Robot on Elevated Rail (at ABB Robotics)</h2>
                 <p>
@@ -312,7 +366,7 @@
         </div>
 
         <!-- Project 6 -->
-        <div class="project">
+        <div class="project" id="project-7">
             <div class="project-text">
                 <h2>Research and Development of Core Robotic Motion Control<br>(at ABB Robotics)</h2>
                 <p>
@@ -329,7 +383,7 @@
 
         
         <!-- Project 6 -->
-        <div class="project">
+        <div class="project" id="project-8">
             <div class="project-text">
                 <h2>Continuous Motion Rig (at ABB Robotics)</h2>
                 <p>
@@ -351,7 +405,7 @@
 
 
         <!-- Project 7 -->
-        <div class="project">
+        <div class="project" id="project-9">
             <div class="project-text">
                 <h2>Real-Time Path Planner for Industrial Robots (at Zivid)</h2>
                 <p>
@@ -373,7 +427,7 @@
         
         
         <!-- Project 8 -->
-        <div class="project">
+        <div class="project" id="project-10">
             <div class="project-text">
                 <h2>Hybrid Propulsion System (at Rolls Royce Marine)</h2>
                 <p>
@@ -392,7 +446,7 @@
 
     
         <!-- Project 9 -->
-        <div class="project">
+        <div class="project" id="project-11">
             <div class="project-text">
                 <h2>Tidal Water Generation (at Rolls Royce Marine)</h2>
                 <p>
@@ -405,7 +459,7 @@
         </div>
 
     <!-- Project 9e -->
-        <div class="project">
+        <div class="project" id="project-12">
             <div class="project-text">
                 <h2>Heave Compensation System for Subsea & Seismic Vessels<br>(at Rolls Royce Marine)</h2>
                 <p>
@@ -419,7 +473,7 @@
         </div>
 
         <!-- Project 9 -->
-        <div class="project">
+        <div class="project" id="project-13">
             <div class="project-text">
                 <h2>Subsea Control Systems for Deepwater Oil & Gas Production (at General Electric & Equinor)</h2>
                 <p>
@@ -436,7 +490,7 @@
         </div>
 
         <!-- Project 9b -->
-        <div class="project">
+        <div class="project" id="project-14">
             <div class="project-text">
                 <h2>Subsea Pipeline Connector System - Valhall Redevelopment<br>(at General Electric)</h2>
                 <p>
@@ -453,7 +507,7 @@
         </div>
 
         <!-- Project 9c -->
-        <div class="project">
+        <div class="project" id="project-15">
             <div class="project-text">
                 <h2>Subsea Power Distribution & Switchgear Control System<br>(at General Electric)</h2>
                 <p>
@@ -470,7 +524,7 @@
         </div>
 
         <!-- Project 9d -->
-        <div class="project">
+        <div class="project" id="project-16">
             <div class="project-text">
                 <h2>Emergency Riser Disconnect Packet (at General Electric)</h2>
                 <p>
@@ -483,7 +537,7 @@
         </div>
 
         <!-- Project 9 -->
-        <div class="project">
+        <div class="project" id="project-17">
             <div class="project-text">
                 <h2>Marine Industry Projects (at Rysjedal Elektro AS)</h2>
                 <p>
@@ -501,7 +555,7 @@
 
 
         <!-- Project 10 -->
-        <div class="project">
+        <div class="project" id="project-18">
             <div class="project-text">
                 <h2>PhD Thesis: Mechatronic Design Techniques for Motion Control Systems of a Three-Wheeled Mobile Platform Using an Energy Performance Index</h2>
                 <p>
@@ -529,8 +583,66 @@
 
 
     </div>
+    <nav class="toc-nav" id="toc-nav">
+        <div class="toc-title">On This Page</div>
+        <a href="#project-1" data-target="project-1">Robot Pipe Handler (Canrig)</a>
+        <a href="#project-2" data-target="project-2">7DOF Drilling Robot (Canrig)</a>
+        <a href="#project-3" data-target="project-3">Robot Vision System (Canrig)</a>
+        <a href="#project-4" data-target="project-4">MotoROS2 (Yaskawa)</a>
+        <a href="#project-5" data-target="project-5">MOTOMAN NEXT Controller (Yaskawa)</a>
+        <a href="#project-6" data-target="project-6">IRB5500 Paint Robot (ABB)</a>
+        <a href="#project-7" data-target="project-7">Core Motion Control R&D (ABB)</a>
+        <a href="#project-8" data-target="project-8">Continuous Motion Rig (ABB)</a>
+        <a href="#project-9" data-target="project-9">Real-Time Path Planner (Zivid)</a>
+        <a href="#project-10" data-target="project-10">Hybrid Propulsion (RR Marine)</a>
+        <a href="#project-11" data-target="project-11">Tidal Water Generation (RR Marine)</a>
+        <a href="#project-12" data-target="project-12">Heave Compensation (RR Marine)</a>
+        <a href="#project-13" data-target="project-13">Subsea Control Systems (GE & Equinor)</a>
+        <a href="#project-14" data-target="project-14">Subsea Pipeline Connector (GE)</a>
+        <a href="#project-15" data-target="project-15">Subsea Power Distribution (GE)</a>
+        <a href="#project-16" data-target="project-16">Emergency Riser Disconnect (GE)</a>
+        <a href="#project-17" data-target="project-17">Marine Industry Projects</a>
+        <a href="#project-18" data-target="project-18">PhD Thesis</a>
+    </nav>
+    </div>
     <footer>
         © 2026 Markus Buchholz | Autonomous Systems & Control
     </footer>
+    <script>
+        (function () {
+            var links = Array.prototype.slice.call(document.querySelectorAll('.toc-nav a'));
+            var sections = links.map(function (link) {
+                return document.getElementById(link.getAttribute('data-target'));
+            });
+
+            function setActive(id) {
+                links.forEach(function (link) {
+                    link.classList.toggle('active', link.getAttribute('data-target') === id);
+                });
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            setActive(entry.target.id);
+                        }
+                    });
+                }, { rootMargin: '-120px 0px -70% 0px', threshold: 0 });
+
+                sections.forEach(function (section) {
+                    if (section) observer.observe(section);
+                });
+            }
+
+            window.addEventListener('scroll', function () {
+                var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+                if (atBottom) {
+                    var lastSection = sections[sections.length - 1];
+                    if (lastSection) setActive(lastSection.id);
+                }
+            }, { passive: true });
+        })();
+    </script>
 </body>
 </html>
