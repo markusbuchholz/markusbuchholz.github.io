@@ -631,19 +631,21 @@
                 });
             });
 
+            var TOP_OFFSET = 150;
+
             function updateActive() {
                 ticking = false;
 
                 if (Date.now() < suppressUntil) return;
+                if (!sections.length) return;
 
-                var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
-                if (atBottom) {
-                    var lastSection = sections[sections.length - 1];
-                    if (lastSection) setActive(lastSection.id);
-                    return;
-                }
+                var maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 0);
+                var lastOffset = sections[sections.length - 1].offsetTop;
+                var targetMax = Math.max(maxScroll + TOP_OFFSET, lastOffset + 1);
+                var scrollPos = maxScroll > 0
+                    ? TOP_OFFSET + window.scrollY * (targetMax - TOP_OFFSET) / maxScroll
+                    : TOP_OFFSET;
 
-                var scrollPos = window.scrollY + 150;
                 var current = sections[0];
                 for (var i = 0; i < sections.length; i++) {
                     if (sections[i].offsetTop <= scrollPos) {
