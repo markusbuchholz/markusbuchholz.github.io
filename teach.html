@@ -300,7 +300,7 @@
                 </div>
             </div>
             <div class="course-image">
-                <img src="media/bt_course.png" alt="BT">
+                <img src="media/bt_course.png" alt="BT" style="width: 75%; height: auto;">
             </div>
         </div>
 
@@ -318,7 +318,7 @@
                 </div>
             </div>
             <div class="course-image">
-                <img src="media/rl_course.png" alt="RL">
+                <img src="media/rl_course.png" alt="RL" style="width: 75%; height: auto;">
             </div>
         </div>
 
@@ -336,7 +336,7 @@
                 </div>
             </div>
             <div class="course-image">
-                <img src="media/ml_course.png" alt="ML">
+                <img src="media/ml_course.png" alt="ML" style="width: 75%; height: auto;">
             </div>
         </div>
 
@@ -411,6 +411,45 @@
             </div>
         </div>
 
+        <!-- Canrig Control Systems -->
+        <div class="course" id="course-10">
+            <div class="course-text">
+                <h2>Control Systems for Robotics <br>(at Canrig Robotics)</h2>
+                <p>
+                    An introductory to intermediate course covering the core principles of control theory and system dynamics, tailored specifically for robotics applications, which I designed and taught at Canrig Robotics.
+                    The curriculum takes you from fundamental concepts - such as open vs. closed-loop systems, LTI dynamics, and differential equations - to practical tools like Fourier analysis and Laplace transforms.
+                    You'll explore first- and second-order system dynamics (e.g., robot joint models), evaluate stability using Bode plots and Nyquist criteria, and learn practical controller and filter design (such as Notch filters) to handle system delays and noise.
+                    To make the theoretical concepts practical and intuitive, all course topics are paired with interactive, runnable Python code shared via Google Colab.
+                </p>
+                <div class="btn-group">
+                    <a href="media/canrig/canrig_control_system.pdf" target="_blank" style="margin-right: 25px;" class="btn-rounded">Course PDF</a>
+                    <a href="https://colab.research.google.com/github/markusbuchholz/markusbuchholz.github.io/blob/main/media/canrig/CANRIG_control/Control%20Systems%20Overview%20CANRIG.ipynb" target="_blank" style="margin-right: 25px;" class="btn-rounded">Google Colab</a>
+                    <a href="https://colab.research.google.com/github/markusbuchholz/markusbuchholz.github.io/blob/main/media/canrig/CANRIG_control/Fourier%20Transform_MARKUS.ipynb" target="_blank" style="margin-right: 25px;" class="btn-rounded">Fourier Analysis</a>
+                </div>
+            </div>
+            <div class="course-image">
+                <img src="media/control_systems_mb.png" alt="Control Systems for Robotics course overview">
+            </div>
+        </div>
+
+        <!-- Canrig Deep RL -->
+        <div class="course" id="course-11">
+            <div class="course-text">
+                <h2>Introduction to Deep Reinforcement Learning <br>(at Canrig Robotics)</h2>
+                <p>
+                    An introductory course exploring the core principles of machine learning, deep learning, and reinforcement learning tailored for robotics and autonomous decision-making, which I designed and taught at Canrig Robotics.
+                    The curriculum introduces fundamental machine learning paradigms before diving deep into reinforcement learning, covering Markov Decision Processes (MDPs), policy optimization, Bellman equations, Q-learning, and value function approximation.
+                    Additionally, it covers neural network architectures, activation functions, and practical implementation software stacks like TensorFlow and Keras used for training deep learning models.
+                </p>
+                <div class="btn-group">
+                    <a href="media/canrig/canrig_ai.pdf" target="_blank" style="margin-right: 25px;" class="btn-rounded">Course PDF</a>
+                </div>
+            </div>
+            <div class="course-image">
+                <img src="media/deep_mb.png" alt="Introduction to Deep Reinforcement Learning course overview">
+            </div>
+        </div>
+
     </div>
     <nav class="toc-nav" id="toc-nav">
         <div class="toc-title">On This Page</div>
@@ -423,6 +462,8 @@
         <a href="#course-7" data-target="course-7">Lecture: Motion Planning (HWU)</a>
         <a href="#course-8" data-target="course-8">Lecture: Marine Robotics (HWU)</a>
         <a href="#course-9" data-target="course-9">Technical Blog (Medium)</a>
+        <a href="#course-10" data-target="course-10">Course: Control Systems (Canrig)</a>
+        <a href="#course-11" data-target="course-11">Course: Deep RL (Canrig)</a>
     </nav>
     </div>
 <footer>
@@ -437,7 +478,9 @@
 
             function setActive(id) {
                 links.forEach(function (link) {
-                    link.classList.toggle('active', link.getAttribute('data-target') === id);
+                    var isActive = link.getAttribute('data-target') === id;
+                    link.classList.toggle('active', isActive);
+                    if (isActive) link.scrollIntoView({ block: 'nearest' });
                 });
             }
 
