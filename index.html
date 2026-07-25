@@ -71,7 +71,73 @@
             max-width: 75%;
             height: auto;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 0; 
+            border-radius: 0;
+        }
+        .gif-carousel {
+            width: 75%;
+            margin: 20px auto 0;
+            position: relative;
+        }
+        .carousel-viewport {
+            width: 100%;
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .carousel-viewport img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+        .carousel-arrow:hover {
+            background-color: #0073e6;
+            transform: translateY(-50%) scale(1.08);
+        }
+        .carousel-prev {
+            left: 8px;
+        }
+        .carousel-next {
+            right: 8px;
+        }
+        .carousel-dots {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        .carousel-dots button {
+            width: 9px;
+            height: 9px;
+            padding: 0;
+            border-radius: 50%;
+            border: none;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+        .carousel-dots button.active {
+            background-color: #0073e6;
         }
         .logos {
             display: flex;
@@ -103,6 +169,12 @@
             }
             .image-container img {
                 max-width: 100%;
+            }
+            .gif-carousel {
+                width: 100%;
+            }
+            .carousel-viewport {
+                height: 220px;
             }
             .logos a img {
                 width: 120px;
@@ -179,6 +251,14 @@
         </div>
         <div class="image-container">
             <img src="media/markus.png" alt="Markus' Photo">
+            <div class="gif-carousel">
+                <button class="carousel-arrow carousel-prev" aria-label="Previous slide">&#10094;</button>
+                <div class="carousel-viewport">
+                    <img id="carousel-img" src="media/canrig_1.gif" alt="Autonomous drilling robot at Canrig Robotics">
+                </div>
+                <button class="carousel-arrow carousel-next" aria-label="Next slide">&#10095;</button>
+                <div class="carousel-dots"></div>
+            </div>
         </div>
     </div>
     <div class="logos">
@@ -192,5 +272,83 @@
     <footer>
         © 2026 Markus Buchholz | Autonomous Systems & Control
     </footer>
+    <script>
+        (function () {
+            var slides = [
+                { src: 'media/canrig_2.gif', alt: 'Autonomous drilling robot at Canrig Robotics' },
+                { src: 'media/canrig_1.gif', alt: 'Autonomous drilling robot at Canrig Robotics' },
+                { src: 'media/gripper.gif', alt: 'Robotic gripper' },
+                { src: 'media/multi.gif', alt: 'Multi-agent autonomous system' },
+                { src: 'media/tele_1.gif', alt: 'Teleoperation demo' },
+                // { src: 'media/tele_2.gif', alt: 'Teleoperation demo' }, 
+                { src: 'media/gazebo_rov.gif', alt: 'Gazebo simulation of ROV' }, 
+                { src: 'media/drone_boat.gif', alt: 'Drone and autonomous surface vessel' },
+                { src: 'media/gazebo.gif', alt: 'Gazebo simulation' },
+                { src: 'media/gazebo_boat.gif', alt: 'Gazebo simulation of autonomous boat' },
+                { src: 'media/drone.gif', alt: 'Autonomous drone' },
+                { src: 'media/lake_blueboat.gif', alt: 'BlueBoat field test on a lake' },
+                // { src: 'media/lake_blueboat_2.gif', alt: 'BlueBoat field test on a lake' },
+                // { src: 'media/maze.gif', alt: 'Autonomous maze navigation' },
+                { src: 'media/motoros2.gif', alt: 'MotoROS2 real-time ROS 2 interface' },
+                
+                { src: 'media/r_results.gif', alt: 'Research results visualization' },
+                // { src: 'media/sage_1.gif', alt: 'SAGE project demo' },
+                { src: 'media/sailboat.gif', alt: 'Autonomous sailboat' },
+                
+                { src: 'media/yask_1.gif', alt: 'Real-time ROS 2 interface at Yaskawa Robotics' },
+                // { src: 'media/yask_2.gif', alt: 'Real-time ROS 2 interface at Yaskawa Robotics' },
+                { src: 'media/doosan.gif', alt: 'Doosan robotic manipulator' }
+            ];
+
+            var img = document.getElementById('carousel-img');
+            var dotsContainer = document.querySelector('.carousel-dots');
+            var prevBtn = document.querySelector('.carousel-prev');
+            var nextBtn = document.querySelector('.carousel-next');
+            var current = 0;
+            var timer = null;
+            var INTERVAL_MS = 7000;
+
+            slides.forEach(function (_, i) {
+                var dot = document.createElement('button');
+                dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                dot.addEventListener('click', function () {
+                    goTo(i);
+                    restartTimer();
+                });
+                dotsContainer.appendChild(dot);
+            });
+            var dots = Array.prototype.slice.call(dotsContainer.children);
+
+            function render() {
+                img.src = slides[current].src;
+                img.alt = slides[current].alt;
+                dots.forEach(function (dot, i) {
+                    dot.classList.toggle('active', i === current);
+                });
+            }
+
+            function goTo(index) {
+                current = (index + slides.length) % slides.length;
+                render();
+            }
+
+            function restartTimer() {
+                if (timer) clearInterval(timer);
+                timer = setInterval(function () { goTo(current + 1); }, INTERVAL_MS);
+            }
+
+            prevBtn.addEventListener('click', function () {
+                goTo(current - 1);
+                restartTimer();
+            });
+            nextBtn.addEventListener('click', function () {
+                goTo(current + 1);
+                restartTimer();
+            });
+
+            render();
+            restartTimer();
+        })();
+    </script>
 </body>
 </html>
