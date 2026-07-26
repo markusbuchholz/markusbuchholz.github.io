@@ -110,6 +110,9 @@
             align-items: center;
             justify-content: center;
             transition: background-color 0.2s ease, transform 0.2s ease;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            z-index: 2;
         }
         .carousel-arrow:hover {
             background-color: #0073e6;
@@ -175,6 +178,16 @@
             }
             .carousel-viewport {
                 height: 220px;
+            }
+            .carousel-arrow {
+                width: 44px;
+                height: 44px;
+            }
+            .carousel-prev {
+                left: 16px;
+            }
+            .carousel-next {
+                right: 16px;
             }
             .logos a img {
                 width: 120px;
