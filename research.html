@@ -38,7 +38,10 @@
             text-decoration: none;
             color: #333;
             font-size: 1.15rem;
-            margin-left: 20px;
+            margin-left: 2px;
+            padding: 6px 10px;
+            border-radius: 20px;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
         .page-layout {
             max-width: 1500px;
@@ -204,8 +207,12 @@
 
 
             header nav a.active {
-            color: #0073e6;
-            text-decoration: underline;
+            background-color: #0073e6;
+            color: #fff;
+            text-decoration: none;
+        }
+            header nav a:hover:not(.active) {
+            background-color: rgba(0, 115, 230, 0.12);
         }
         @media (max-width: 768px) {
             .research {
