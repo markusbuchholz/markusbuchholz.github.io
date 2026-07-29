@@ -153,7 +153,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-        #manipulation-image, #teleop-image, #sage-image, #bluerov2-image {
+        #manipulation-image, #teleop-image, #sage-image, #bluerov2-image, #wm-image {
             flex: 0 0 520px;
         }
         .social-icons {
@@ -225,7 +225,7 @@
             .research-image {
                 margin-top: 20px;
             }
-            #manipulation-image, #teleop-image, #sage-image, #bluerov2-image {
+            #manipulation-image, #teleop-image, #sage-image, #bluerov2-image, #wm-image {
                 flex-basis: 100%;
             }
         }
@@ -268,16 +268,16 @@
             <div class="research-text">
                 <h2>World-Model-Grounded LLM Planning for AUV and ASV Navigation Near Offshore Wind Farms</h2>
                 <p>
-                    Large Language Models (LLMs) can decompose complex mission prompts into sequential robot actions, but they lack physical grounding—often failing to account for hydrodynamic drag, current drift, or thruster lag in marine environments. This work introduces a physics-grounded world model architecture that pairs an LLM planner with a neural-surrogate simulator, a gradient-based trajectory optimizer, and a Model Predictive Control (MPC) closed-loop replanner with a trust-region guard. The LLM determines the high-level action sequence, while the world model optimizes action durations to guarantee physical feasibility and collision-free navigation for both a 6-DOF Autonomous Underwater Vehicle (AUV) and a 3-DOF differential-drive Autonomous Surface Vehicle (ASV).
+                    Large Language Models (LLMs) can decompose complex mission prompts into robot actions, but lack physical grounding—often ignoring hydrodynamic drag, current drift, or thruster lag. This work pairs an LLM planner with a neural-surrogate world model, a gradient-based trajectory optimizer, and an MPC closed-loop replanner with a trust-region guard. The LLM sets the high-level action sequence, while the world model optimizes action durations to guarantee feasible, collision-free navigation for a 6-DOF AUV and a 3-DOF differential-drive ASV.
                 </p>
                 <p>
-                    In simulated offshore wind farm navigation scenarios, world-model grounding achieved a 100% success rate with zero collisions, compared to a 0% success rate for ungrounded LLM plans. In GazeboSim physics trials with active waves and currents, the approach cut goal-distance error over ungrounded baselines by 70–82% for the ASV and ~93% for the AUV. Additionally, a Vision-Language Model (VLM) pipeline converted satellite maps, nautical charts, and weather forecasts into 96%-accurate obstacle maps, enabling sensor-cheap ASV navigation.
+                    In simulated offshore wind farm scenarios, world-model grounding reached a 100% success rate with zero collisions versus 0% for ungrounded LLM plans. In GazeboSim trials with waves and currents, it cut goal-distance error by 70–82% for the ASV and ~93% for the AUV. A companion VLM pipeline also converted satellite maps, nautical charts, and weather forecasts into 96%-accurate obstacle maps for sensor-cheap ASV navigation.
                 </p>
                 <p>
                     <strong>This work has been submitted to the IROS 2026 AQ²UASIM workshop and is currently under review.</strong>
                 </p>
             </div>
-            <div class="research-image">
+            <div class="research-image" id="wm-image">
                 <img src="media/world_auv.png" alt="World-model-grounded LLM planning for AUV/ASV navigation" style="width: 100%; height: auto; border-radius: 8px;">
             </div>
         </div>
@@ -325,8 +325,7 @@
                 </p>
             </div>
             <div class="research-image">
-                <img src="media/aura.png" alt="AURA Architecture Diagram" style="max-width: 70%; height: auto;">
-                <video controls poster="media/logo_aura_vid.png" style="width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
+                <video controls poster="media/logo_aura_vid.png" style="width: 100%; height: auto; border-radius: 8px;">
                     <source src="media/AURA_video_ver_3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -351,8 +350,7 @@
                 </p>
             </div>
             <div class="research-image">
-                <img src="media/urosa_2.png" alt="UROSA Architecture Diagram" style="max-width: 70%; height: auto;">
-                <video controls poster="media/logo_vid_arch.png" style="width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
+                <video controls poster="media/logo_vid_arch.png" style="width: 100%; height: auto; border-radius: 8px;">
                     <source src="media/JOURNAL_ARCH_ver_2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
