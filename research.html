@@ -264,6 +264,24 @@
         </div>
 
 
+        <div class="research" id="research-wm-planning">
+            <div class="research-text">
+                <h2>World-Model-Grounded LLM Planning for AUV and ASV Navigation Near Offshore Wind Farms</h2>
+                <p>
+                    Large Language Models (LLMs) can decompose complex mission prompts into sequential robot actions, but they lack physical grounding—often failing to account for hydrodynamic drag, current drift, or thruster lag in marine environments. This work introduces a physics-grounded world model architecture that pairs an LLM planner with a neural-surrogate simulator, a gradient-based trajectory optimizer, and a Model Predictive Control (MPC) closed-loop replanner with a trust-region guard. The LLM determines the high-level action sequence, while the world model optimizes action durations to guarantee physical feasibility and collision-free navigation for both a 6-DOF Autonomous Underwater Vehicle (AUV) and a 3-DOF differential-drive Autonomous Surface Vehicle (ASV).
+                </p>
+                <p>
+                    In simulated offshore wind farm navigation scenarios, world-model grounding achieved a 100% success rate with zero collisions, compared to a 0% success rate for ungrounded LLM plans. In GazeboSim physics trials with active waves and currents, the approach cut goal-distance error over ungrounded baselines by 70–82% for the ASV and ~93% for the AUV. Additionally, a Vision-Language Model (VLM) pipeline converted satellite maps, nautical charts, and weather forecasts into 96%-accurate obstacle maps, enabling sensor-cheap ASV navigation.
+                </p>
+                <p>
+                    <strong>This work has been submitted to the IROS 2026 AQ²UASIM workshop and is currently under review.</strong>
+                </p>
+            </div>
+            <div class="research-image">
+                <img src="media/world_auv.png" alt="World-model-grounded LLM planning for AUV/ASV navigation" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+        </div>
+
         <div class="research" id="research-0">
             <div class="research-text">
                 <h2>SAGE: Ergodic Control for Autonomous and Adaptive Inspection of Subsea Infrastructure</h2>
@@ -577,6 +595,7 @@
     </div>
     <nav class="toc-nav" id="toc-nav">
         <div class="toc-title">On This Page</div>
+        <a href="#research-wm-planning" data-target="research-wm-planning">World Model LLM Planning</a>
         <a href="#research-0" data-target="research-0">SAGE (Ergodic Control)</a>
         <a href="#research-1" data-target="research-1">AURA (Anomaly Diagnostics)</a>
         <a href="#research-2" data-target="research-2">UROSA (Distributed AI Agents)</a>
