@@ -264,6 +264,30 @@
         </div>
 
 
+        <div class="research" id="research-0">
+            <div class="research-text">
+                <h2>SAGE: Ergodic Control for Autonomous and Adaptive Inspection of Subsea Infrastructure</h2>
+                <p>
+                    Subsea infrastructure inspection currently relies on fixed schedule routes that treat all components equally, regardless of risk. When a leak or anomaly emerges mid-mission, traditional fixed-tour path planners (A*) cannot adapt without manual operator re-planning. SAGE (Semantic and Adaptive Generative Ergodicity) is an ergodic-control architecture that dynamically allocates AUV time in proportion to a live, sensor-derived risk distribution rather than a scripted route.
+                </p>
+                <p>
+                    By projecting both the risk distribution and vehicle trajectory into Fourier space, the spectral multiscale coverage controller continuously drives down coverage error on every control cycle. In simulated two-XT inspection scenarios, SAGE automatically increased revisit frequency for a high-risk valve-checking it every 5.8s compared to a fixed 8.1s loop under A*-while adapting instantly to new risk weights without explicit re-planning steps or human intervention.
+                </p>
+                <p>
+                    <strong>This work has been submitted to the IROS 2026 AQ²UASIM workshop and is currently under review.</strong>
+                </p>
+                <p><div class="btn-group">
+                    <a href="media/SAGE_research_note.pdf" target="_blank" class="btn-rounded">Research Note</a>
+                    <a href="media/SAGE_web.mp4" target="_blank" class="btn-rounded">Presentation</a>
+                </div>
+                </p>
+            </div>
+            <div class="research-image" id="sage-image">
+                <img src="media/sage_ours.png" alt="SAGE ergodic control results" style="width: 100%; height: auto; border-radius: 8px;">
+                <img src="media/scenario2_graded_weights.gif" alt="SAGE scenario 2 graded weights" style="width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
+            </div>
+        </div>
+
         <div class="research" id="research-1">
             <div class="research-text">
                 <h2>A Collaborative Reasoning Framework for Anomaly Diagnostics in Underwater Robotics</h2>
@@ -475,33 +499,6 @@
         </div>
 
 
-        <!--
-        <div class="research">
-            <div class="research-text">
-                <h2>SAGE (Semantic and Adaptive Generative Ergodicity)</h2>
-                <p>
-                    SAGE is a research project exploring how underwater robots can decide where to look, not just where to go. Instead of flying a fixed lawnmower pattern, the vehicle uses ergodic control to spend its time in proportion to where a target distribution says something interesting might be. That distribution is built live from onboard vision and mission intent, so the robot's coverage behavior updates itself as new detections come in, rather than requiring a full re-plan. The same mechanism can be inverted to keep the vehicle away from a hazard zone or fragile habitat, with no separate avoidance logic needed.
-                </p>
-                <p>
-                    The approach was implemented in ROS 2 and tested on a BlueROV2 Heavy in the Stonefish simulator, on a pipeline inspection task with several candidate anomalies competing for attention. Early results are promising: the vehicle's trajectory tracks the shape of the underlying belief rather than a scripted order, and degrades gracefully if the mission is cut short. This is ongoing work, and the next phase will focus on closing the sim-to-real gap with a physical BlueROV2 trial.
-                </p>
-                <p>
-                    I put together a research note laying out the plan to validate this idea in real underwater conditions, along with a short presentation of the work.
-                </p>
-                <p>
-                    <div class="btn-group">
-                        <a href="media/SAGE_research_note.pdf" target="_blank" class="btn-rounded">Research Note</a>
-                        <a href="media/SAGE_web.mp4" target="_blank" class="btn-rounded">Presentation</a>
-                    </div>
-                </p>
-            </div>
-            <div class="research-image" id="sage-image">
-                <img src="media/sage_1.gif" alt="SAGE ergodic coverage research" style="width: 100%; height: auto; border-radius: 8px;">
-            </div>
-        </div>
-        -->
-
-
         <!-- Research 3 -->
         <div class="research" id="research-9">
             <div class="research-text">
@@ -580,6 +577,7 @@
     </div>
     <nav class="toc-nav" id="toc-nav">
         <div class="toc-title">On This Page</div>
+        <a href="#research-0" data-target="research-0">SAGE (Ergodic Control)</a>
         <a href="#research-1" data-target="research-1">AURA (Anomaly Diagnostics)</a>
         <a href="#research-2" data-target="research-2">UROSA (Distributed AI Agents)</a>
         <a href="#research-3" data-target="research-3">Postdoc: Robots UNITE</a>
