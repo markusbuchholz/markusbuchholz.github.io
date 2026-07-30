@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2720%27 fill=%27%230073e6%27/%3E%3Ctext x=%2750%27 y=%2768%27 font-size=%2755%27 font-family=%27Arial, sans-serif%27 font-weight=%27bold%27 fill=%27white%27 text-anchor=%27middle%27%3EMB%3C/text%3E%3C/svg%3E">
-    <title>Workshops | Markus Buchholz</title>
+    <title>Events | Markus Buchholz</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -232,7 +232,7 @@
 </head>
 <body>
     <header>
-        <h1>Workshops</h1>
+        <h1>Events</h1>
         <div class="social-icons">
             <a href="https://github.com/markusbuchholz" target="_blank"><img src="media/github_logo.png" alt="GitHub"></a>
             <a href="https://medium.com/@markus-x-buchholz" target="_blank"><img src="media/medium_logo.png" alt="Medium"></a>
@@ -243,7 +243,7 @@
             <a href="index.html">About</a>
             <a href="research.html">Research</a>
             <a href="projects.html">Projects</a>
-            <a href="workshops.html" class="active">Workshops</a>
+            <a href="workshops.html" class="active">Events</a>
             <a href="urosa.html">UROSA</a>
             <a href="aura.html">AURA</a>
             <a href="software.html">Software</a>
@@ -253,7 +253,7 @@
     </header>
     <div class="page-layout">
     <div class="container">
-        <div class="title">Workshops & Events</div>
+        <div class="title">Events</div>
         <div class="interests">
             I organize and co-organize <strong>international workshops</strong> that bring together simulation, benchmarking, and autonomy research for maritime and underwater robotics. These events are part of my broader effort to make high-quality marine robotics simulation <strong>open, reproducible, and useful</strong> to both academia and industry.
         </div>
@@ -342,12 +342,36 @@
             </div>
         </div>
 
+        <!-- ROS-Industrial Conference 2023 -->
+        <div class="research" id="research-4">
+            <div class="research-text">
+                <h2>MotoROS2: Interface for ROS 2 Applications</h2>
+                <p class="meta">
+                    <strong>ROS-Industrial Conference 2023</strong> &nbsp;|&nbsp; July 04-05, 2023 &nbsp;|&nbsp; Parc des Expositions de Bordeaux, France
+                </p>
+                <p>
+                    MotoROS2 is the official ROS 2 driver for Yaskawa Motoman industrial robot controllers, replacing the earlier ROS 1-based MotoROS bridge with an interface built natively on ROS 2 middleware. It exposes standard ROS 2 action and topic interfaces for trajectory execution, joint state feedback, and I/O control, letting engineers run modern motion-planning stacks directly against production Yaskawa controllers without writing vendor-specific glue code.
+                </p>
+                <p>
+                    At the ROS-Industrial Conference 2023 in Bordeaux, I gave a detailed presentation of this work, covering the driver architecture, the supported motion and I/O interfaces, and a set of reference applications built on top of it. I walked through how the interface can be configured and extended for different Yaskawa controller families, and discussed real deployment scenarios where custom applications can be arranged around the same core driver.
+                </p>
+                <div class="btn-group">
+                    <a href="https://www.youtube.com/watch?v=-TZbwtD8xG0" target="_blank" style="margin-right: 20px;" class="btn-rounded">My presentation at the ROS-I 2023</a>
+                    <a href="https://docs.google.com/presentation/d/1NTnXeTuY0O6x6CcPK_pgQjYoWUl2WPrkECzEqIzzIWs/edit?usp=sharing" target="_blank" style="margin-right: 20px;" class="btn-rounded">Presentation</a>
+                </div>
+            </div>
+            <div class="research-image">
+                <img src="media/motoYaskawa.png" alt="MotoROS2 presentation at ROS-Industrial Conference 2023" style="width: 100%; height: 50%; max-height: 500px; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+
     </div>
     <nav class="toc-nav" id="toc-nav">
         <div class="toc-title">On This Page</div>
         <a href="#research-1" data-target="research-1">AQ²UASIM v2 (IROS 2026)</a>
         <a href="#research-2" data-target="research-2">FFI Seminar (Battle-Near ICT)</a>
         <a href="#research-3" data-target="research-3">ICRA 2025 Workshop</a>
+        <a href="#research-4" data-target="research-4">MotoROS2 (ROS-I 2023)</a>
     </nav>
     </div>
     <footer style="text-align: center;">
