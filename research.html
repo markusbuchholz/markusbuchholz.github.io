@@ -156,6 +156,9 @@
         #manipulation-image, #teleop-image, #sage-image, #bluerov2-image, #wm-image {
             flex: 0 0 520px;
         }
+        #aura-gif-image, #urosa-gif-image {
+            flex: 0 0 600px;
+        }
         .social-icons {
             display: flex;
             align-items: center;
@@ -226,6 +229,9 @@
                 margin-top: 20px;
             }
             #manipulation-image, #teleop-image, #sage-image, #bluerov2-image, #wm-image {
+                flex-basis: 100%;
+            }
+            #aura-gif-image, #urosa-gif-image {
                 flex-basis: 100%;
             }
         }
@@ -324,11 +330,8 @@
                 </div>
                 </p>
             </div>
-            <div class="research-image">
-                <video controls poster="media/logo_aura_vid.png" style="width: 100%; height: auto; border-radius: 8px;">
-                    <source src="media/AURA_video_ver_3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="research-image" id="aura-gif-image">
+                <img src="media/aura_gif.gif" alt="AURA demonstration" style="width: 100%; height: auto; border-radius: 8px;">
             </div>
         </div>
 
@@ -349,11 +352,8 @@
                 </div>
                 </p>
             </div>
-            <div class="research-image">
-                <video controls poster="media/logo_vid_arch.png" style="width: 100%; height: auto; border-radius: 8px;">
-                    <source src="media/JOURNAL_ARCH_ver_2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="research-image" id="urosa-gif-image">
+                <img src="media/urosa_gif.gif" alt="UROSA demonstration" style="width: 100%; height: auto; border-radius: 8px;">
             </div>
         </div>
 
