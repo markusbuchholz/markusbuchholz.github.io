@@ -342,8 +342,30 @@
             </div>
         </div>
 
-        <!-- ROS-Industrial Conference 2023 -->
+        <!-- GazeboSim Maritime Meeting Community -->
         <div class="research" id="research-4">
+            <div class="research-text">
+                <h2>GazeboSim Maritime Meeting Community Talk: Motion Control for Tethered Multi-Robot Systems</h2>
+                <p class="meta">
+                    <strong>GazeboSim Maritime Meeting Community</strong> &nbsp;|&nbsp; September 19, 2025
+                </p>
+                <p>
+                    I presented my Heriot-Watt <strong>UNITE</strong> research to the GazeboSim Maritime Meeting Community, covering autonomous underwater operations for multi-agent robots supporting offshore wind farm maintenance. The talk introduced a tethered AUV-ASV system - an underwater vehicle physically linked to a surface vehicle by a tether - built to inspect subsea wind-turbine foundations without sending crewed vessels offshore.
+                </p>
+                <p>
+                    I walked through the full motion-control stack: pre-mission planning with tether modeling (catenary shape and tether constraints), a constrained multi-agent A* path planner, and Bezier-based trajectory generation and optimization, followed by adaptive in-mission control combining PID/odometry-driven AUV motion control with MPC-based ASV motion control reacting to GPS feedback and real disturbances - waves, wind, and ocean currents. I demonstrated the framework first in a simulated marine environment and then validated it under real conditions in wave-tank trials with the physical AUV-ASV-tether platform, sharing the underlying ROS 2 software architecture (BlueOS, ArduPilot, and a ROS 2 DDS Cyclone middleware layer linking the ROV and boat) along with the resulting demo footage with the community.
+                </p>
+                <div class="btn-group">
+                    <a href="media/Gazebo_demo.pdf" target="_blank" class="btn-rounded">Presentation</a>
+                </div>
+            </div>
+            <div class="research-image">
+                <img src="media/gazebot_meet.png" alt="GazeboSim Maritime Meeting Community talk" style="width: 100%; height: 50%; max-height: 500px; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+
+        <!-- ROS-Industrial Conference 2023 -->
+        <div class="research" id="research-5">
             <div class="research-text">
                 <h2>MotoROS2: Interface for ROS 2 Applications</h2>
                 <p class="meta">
@@ -371,7 +393,8 @@
         <a href="#research-1" data-target="research-1">AQ²UASIM v2 (IROS 2026)</a>
         <a href="#research-2" data-target="research-2">FFI Seminar (Battle-Near ICT)</a>
         <a href="#research-3" data-target="research-3">ICRA 2025 Workshop</a>
-        <a href="#research-4" data-target="research-4">MotoROS2 (ROS-I 2023)</a>
+        <a href="#research-4" data-target="research-4">GazeboSim Maritime Meeting</a>
+        <a href="#research-5" data-target="research-5">MotoROS2 (ROS-I 2023)</a>
     </nav>
     </div>
     <footer style="text-align: center;">
