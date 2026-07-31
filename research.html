@@ -156,7 +156,7 @@
         #manipulation-image, #teleop-image, #sage-image, #bluerov2-image, #wm-image {
             flex: 0 0 520px;
         }
-        #aura-gif-image, #urosa-gif-image {
+        #aura-gif-image, #urosa-gif-image, #servoing-image {
             flex: 0 0 600px;
         }
         .social-icons {
@@ -239,7 +239,7 @@
             #manipulation-image, #teleop-image, #sage-image, #bluerov2-image, #wm-image {
                 flex-basis: 100%;
             }
-            #aura-gif-image, #urosa-gif-image {
+            #aura-gif-image, #urosa-gif-image, #servoing-image {
                 flex-basis: 100%;
             }
         }
@@ -499,9 +499,25 @@
             </div>
         </div>
 
+        <!-- Underwater Visual Servoing -->
+        <div class="research" id="research-8">
+            <div class="research-text">
+                <h2>Underwater Visual Servoing with an Alpha 5 Manipulator on a BlueROV2 Heavy</h2>
+                <p>
+                    Building on the teleoperated vehicle-manipulator platform, I achieved closed-loop <strong>underwater visual servoing</strong>: an <strong>Alpha 5</strong> manipulator mounted on a <strong>BlueROV2 Heavy</strong> autonomously tracks and follows an object detected by the underwater camera, with no operator driving the arm. The vision pipeline continuously estimates the object's position and feeds it to the arm as a moving target; at every control step, the manipulator re-solves its inverse kinematics (IK) against that updated position, so the end-effector's joint trajectory is constantly re-planned to chase the object rather than reach a single fixed point. The result is smooth, reactive motion that keeps the gripper locked onto the target even as it drifts with the current or moves across the camera's field of view.
+                </p>
+            </div>
+            <div class="research-image" id="servoing-image">
+                <div style="display: flex; gap: 10px;">
+                    <img src="media/servoing_1.gif" alt="Underwater visual servoing with Alpha 5 manipulator on BlueROV2 Heavy, view 1" style="width: 50%; height: auto; border-radius: 8px;">
+                    <img src="media/servoing_2.gif" alt="Underwater visual servoing with Alpha 5 manipulator on BlueROV2 Heavy, view 2" style="width: 50%; height: auto; border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+
 
         <!-- RAG-Semantic Multiagent -->
-        <div class="research" id="research-8">
+        <div class="research" id="research-9">
             <div class="research-text">
                 <h2>RAG-Semantic Integration for Adaptive Multiagent Underwater Autonomy</h2>
                 <p>
@@ -524,7 +540,7 @@
 
 
         <!-- Research 3 -->
-        <div class="research" id="research-9">
+        <div class="research" id="research-10">
             <div class="research-text">
                 <h2>URoBench: Comparative Analyses of Underwater Robotics Simulators from a Reinforcement Learning Perspective</h2>
                 <p>
@@ -547,7 +563,7 @@
 
 
         <!-- BlueROV2 Modeling and Control -->
-        <div class="research" id="research-10">
+        <div class="research" id="research-11">
             <div class="research-text">
                 <h2>Modeling and Control of the BlueROV2 Heavy: Dynamics, PID, and Model Predictive Control</h2>
                 <p>
@@ -572,7 +588,7 @@
 
 
         <!-- World Models / Think Before Act -->
-        <div class="research" id="research-11">
+        <div class="research" id="research-12">
             <div class="research-text">
                 <h2>Neural Surrogate World Models for LLM-Guided MPC</h2>
                 <p>
@@ -610,10 +626,11 @@
         <a href="#research-5" data-target="research-5">Building an AUV from Scratch</a>
         <a href="#research-6" data-target="research-6">Underwater Manipulation</a>
         <a href="#research-7" data-target="research-7">Teleoperation (UVMS)</a>
-        <a href="#research-8" data-target="research-8">RAG-Semantic Multiagent Autonomy</a>
-        <a href="#research-9" data-target="research-9">URoBench: Simulator Benchmarking</a>
-        <a href="#research-10" data-target="research-10">BlueROV2 Modeling &amp; Control</a>
-        <a href="#research-11" data-target="research-11">Neural Surrogate World Models</a>
+        <a href="#research-8" data-target="research-8">Underwater Visual Servoing</a>
+        <a href="#research-9" data-target="research-9">RAG-Semantic Multiagent Autonomy</a>
+        <a href="#research-10" data-target="research-10">URoBench: Simulator Benchmarking</a>
+        <a href="#research-11" data-target="research-11">BlueROV2 Modeling &amp; Control</a>
+        <a href="#research-12" data-target="research-12">Neural Surrogate World Models</a>
     </nav>
     </div>
     <footer style="text-align: center;">
