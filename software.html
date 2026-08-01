@@ -254,7 +254,7 @@
             The frameworks below are designed to accelerate prototyping, simplify reproducibility, and help other researchers
             and engineers move faster from idea to field deployment. I encourage you to explore my
             <a href="https://github.com/markusbuchholz" target="_blank" style="color: #0073e6; text-decoration: none;">GitHub</a>
-            for additional repositories—many of these tools grew directly out of problems I solved building robots for
+            for additional repositories-many of these tools grew directly out of problems I solved building robots for
             offshore, underwater, and industrial applications.
         </div>
 
@@ -472,21 +472,29 @@
         <!-- Software 5 -->
         <div class="software" id="software-10">
             <div class="software-text">
-                <h2>Build Linux Kernel</h2>
+                <h2>Build Linux Kernel &amp; Install Arch Linux</h2>
                 <p>
                     This repository documents how to build a minimal Linux distribution from source, combining deep systems understanding with hands-on implementation.
                     It walks through compiling the Linux kernel inside Docker, integrating a BusyBox userland, and booting the result in QEMU.
                     It is a useful resource for anyone who wants to understand what really happens below the ROS 2 stack in real-time robotics systems.
                 </p>
+                <p>
+                    On the daily-driver side, I run Arch Linux, and put together a beginner-friendly walkthrough for installing it from scratch: flashing the ISO, getting online, running the <code>archinstall</code> guided installer, and setting up a full development stack with <code>pacman</code>/<code>yay</code>-a lean, highly customizable base for robotics and machine learning work.
+                </p>
                 <p><div class="btn-group">
                     <a href="https://medium.com/@markus-x-buchholz/build-your-own-linux-distribution-a-kernel-compilation-and-virtualization-c8ce0f9808f6" target="_blank" style="margin-right: 25px;"class="btn-rounded">Article</a>
                     <a href="https://github.com/markusbuchholz/build_linux_kernel_os" target="_blank" style="margin-right: 25px;"class="btn-rounded">GitHub</a>
+                    <a href="https://markus-x-buchholz.medium.com/choose-simplicity-install-archlinux-e63e629160d9" target="_blank" style="margin-right: 25px;"class="btn-rounded">Arch Article</a>
+                    <a href="https://wiki.archlinux.org/title/Installation_guide" target="_blank" style="margin-right: 25px;"class="btn-rounded">Link</a>
                     </div>
-        
+
                 </p>
             </div>
             <div class="software-image">
-                <img src="media/linux.png" alt="Linux">
+                <div style="display: flex; gap: 10px;">
+                    <img src="media/linux.png" alt="Linux" style="width: 50%; height: auto;">
+                    <img src="media/arch.png" alt="Arch Linux" style="width: 50%; height: auto;">
+                </div>
             </div>
         </div>
 
@@ -502,7 +510,7 @@
         <a href="#software-7" data-target="software-7">Drone Simulator (Marine-Aerial)</a>
         <a href="#software-8" data-target="software-8">ROS 2 + MoveIt Manipulators</a>
         <a href="#software-9" data-target="software-9">RL Path Planner (6DOF)</a>
-        <a href="#software-10" data-target="software-10">Build Linux Kernel</a>
+        <a href="#software-10" data-target="software-10">Build Linux Kernel &amp; Install Arch Linux</a>
     </nav>
     </div>
     <footer style="text-align: center;">
