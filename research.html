@@ -156,6 +156,9 @@
         #manipulation-image, #teleop-image, #sage-image, #bluerov2-image, #wm-image {
             flex: 0 0 520px;
         }
+        #wsc-milcoa-image {
+            flex: 0 0 600px;
+        }
         #aura-gif-image, #urosa-gif-image, #servoing-image {
             flex: 0 0 600px;
         }
@@ -322,6 +325,29 @@
             enabling robotic teams to navigate, adapt, and execute missions in unstructured, high-risk environments.
         </div>
 
+
+        <div class="research" id="research-wsc-milcoa">
+            <div class="research-text">
+                <h2>Simulation-Grounded Agentic AI for Military Course of Action Development</h2>
+                <p>
+                    <em>Work conducted at the <a href="https://www.ffi.no/en" target="_blank">Norwegian Defence Research Establishment (FFI)</a>.</em>
+                </p>
+                <p>
+                    We present a decision-support architecture that couples multi-agent LLM planning with a closed-loop constructive simulation aligned with the Norwegian Army planning process. Using a HybridRAG layer combining doctrine vectors with an operational knowledge graph, the agents task the SWAP simulator via the C2SIM standard and iteratively refine tactical plans based on simulation telemetry and human feedback. Additionally, simulation trajectories are leveraged to train surrogate battlespace world models for rapid candidate plan screening.
+                </p>
+                <p>
+                    <strong>This work has been accepted to the 2026 Winter Simulation Conference: The Military and National Security Applications Track.</strong>
+                </p>
+                <p><div class="btn-group">
+                    <a href="media/WSC_2026_extended_abstract.pdf" target="_blank" class="btn-rounded">Paper</a>
+                    <a href="https://meetings.informs.org/wordpress/wsc2026/military-national-security/" target="_blank" class="btn-rounded">Conference</a>
+                </div>
+                </p>
+            </div>
+            <div class="research-image" id="wsc-milcoa-image">
+                <img src="media/flow_1_ver_6.png" alt="Simulation-grounded agentic AI for military course of action development" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+        </div>
 
         <div class="research" id="research-wm-planning">
             <div class="research-text">
@@ -666,6 +692,7 @@
     </div>
     <nav class="toc-nav" id="toc-nav">
         <div class="toc-title">On This Page</div>
+        <a href="#research-wsc-milcoa" data-target="research-wsc-milcoa">Agentic AI for Military COA Dev.</a>
         <a href="#research-wm-planning" data-target="research-wm-planning">World Model LLM Planning</a>
         <a href="#research-0" data-target="research-0">SAGE (Ergodic Control)</a>
         <a href="#research-1" data-target="research-1">AURA (Anomaly Diagnostics)</a>
